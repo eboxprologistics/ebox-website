@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/Ebox - Final Logo/ebox - final logo -08.svg";
+import Logo from "@/public/Ebox - Final Logo/ebox - final logo -11.svg";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -47,7 +47,7 @@ export default function Header() {
     <>
       <header className="absolute top-0 left-0 right-0 z-30 bg-transparent">
         <div className="bg-transparent flex justify-center items-center py-8 px-4">
-          <div className="flex justify-between items-center w-full max-w-7xl px-4 gap-8">
+          <div className="flex justify-between items-center w-full container-wide px-4 gap-8">
             {/* Logo Left */}
             <Link href="/" className="flex-shrink-0">
               <Image
@@ -64,10 +64,10 @@ export default function Header() {
               <NavigationMenu className="hidden md:block">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="rounded-full bg-transparent text-black px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-black/[0.08] hover:backdrop-blur-[8px] data-[state=open]:bg-black data-[state=open]:backdrop-blur-[8px]">
+                    <NavigationMenuTrigger className="rounded-full bg-transparent text-white px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-white/10 hover:backdrop-blur-[8px] data-[state=open]:bg-white/10 data-[state=open]:backdrop-blur-[8px] data-[state=open]:text-white">
                       Services
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="bg-white/95 backdrop-blur-xl border border-white/20">
                       <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         {navigationLinks.services.map((link) => (
                           <li key={link.name}>
@@ -117,10 +117,10 @@ export default function Header() {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="rounded-full bg-transparent text-black px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-black/[0.08] hover:backdrop-blur-[8px] data-[state=open]:bg-black data-[state=open]:backdrop-blur-[8px]">
+                    <NavigationMenuTrigger className="rounded-full bg-transparent text-white px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-white/10 hover:backdrop-blur-[8px] data-[state=open]:bg-white/10 data-[state=open]:backdrop-blur-[8px] data-[state=open]:text-white">
                       Solutions
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="bg-white/95 backdrop-blur-xl border border-white/20">
                       <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         {navigationLinks.solutions.map((link) => (
                           <li key={link.name}>
@@ -170,10 +170,10 @@ export default function Header() {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="rounded-full bg-transparent text-black px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-black/[0.08] hover:backdrop-blur-[8px] data-[state=open]:bg-black data-[state=open]:backdrop-blur-[8px]">
+                    <NavigationMenuTrigger className="rounded-full bg-transparent text-white px-4 py-3 text-sm leading-6 transition-colors duration-300 hover:bg-white/10 hover:backdrop-blur-[8px] data-[state=open]:bg-white/10 data-[state=open]:backdrop-blur-[8px] data-[state=open]:text-white">
                       Company
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="bg-white/95 backdrop-blur-xl border border-white/20">
                       <ul className="grid gap-1 p-4 md:w-[300px]">
                         {navigationLinks.company.map((link) => (
                           <li key={link.name}>
@@ -230,7 +230,7 @@ export default function Header() {
               <div className="hidden md:flex items-center gap-2">
                 <Link
                   href="#contact"
-                  className="rounded-full bg-primary text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
+                  className="btn-secondary rounded-full text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline transition-all duration-300 hover:bg-primary-hover"
                 >
                   Get Free Assessment
                 </Link>
@@ -239,19 +239,19 @@ export default function Header() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden rounded-full bg-transparent transition-colors duration-300 hover:bg-black/[0.08] hover:backdrop-blur-[8px] flex justify-center items-center p-3 min-h-[44px] min-w-[44px]"
+                className="btn-secondary md:hidden rounded-full bg-transparent transition-colors duration-300 hover:bg-white/[0.08] hover:backdrop-blur-[8px] flex justify-center items-center p-3 min-h-[44px] min-w-[44px]"
               >
                 <div className="flex flex-col justify-center items-center w-6 h-6 gap-1 p-0">
                   {isMobileMenuOpen ? (
                     <>
-                      <div className="w-4 h-0.5 bg-black rounded-full transform rotate-45 translate-y-0.5"></div>
-                      <div className="w-4 h-0.5 bg-black rounded-full transform -rotate-45 -translate-y-0.5"></div>
+                      <div className="w-4 h-0.5 bg-white rounded-full transform rotate-45 translate-y-0.5"></div>
+                      <div className="w-4 h-0.5 bg-white rounded-full transform -rotate-45 -translate-y-0.5"></div>
                     </>
                   ) : (
                     <>
-                      <div className="w-4 h-0.5 bg-black rounded-full"></div>
-                      <div className="w-4 h-0.5 bg-black rounded-full"></div>
-                      <div className="w-4 h-0.5 bg-black rounded-full"></div>
+                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
+                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
+                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
                     </>
                   )}
                 </div>
@@ -388,7 +388,7 @@ export default function Header() {
             <div className="flex flex-col items-stretch justify-center mt-6 px-4 gap-2">
               <Link
                 href="#contact"
-                className="rounded-full bg-primary text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline w-full transition-all duration-300 hover:bg-primary-hover"
+                className="btn-secondary rounded-full text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline w-full transition-all duration-300 hover:bg-primary-hover"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Free Assessment

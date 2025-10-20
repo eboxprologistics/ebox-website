@@ -1,121 +1,156 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-// Import illustrations here when ready
-import ConnectIllustration from "@/public/illustrations/process/connect.png";
-import StockIllustration from "@/public/illustrations/process/stock.svg";
-import FulfillIllustration from "@/public/illustrations/process/fulfill.png";
-import TrackIllustration from "@/public/illustrations/process/track.png";
+import { useState } from "react";
 
 interface StepItem {
+  id: number;
   number: string;
   title: string;
   description: string;
-  illustrationPlaceholder: string;
-  illustration?: any; // Can be StaticImageData or string path
-  customIllustration?: React.ReactNode; // For custom React components
+  glowColor: string;
 }
 
 const steps: StepItem[] = [
   {
+    id: 1,
     number: "01",
     title: "Connect",
     description: "Integration with your e-commerce platforms in 1-3 days",
-    illustrationPlaceholder: "[INTEGRATION_ILLUSTRATION]",
-    illustration: ConnectIllustration,
+    glowColor: "oklch(0.7 0.2 195)",
   },
   {
+    id: 2,
     number: "02",
     title: "Stock",
     description: "Ship inventory to our Dubai warehouse - live in 4 hours",
-    illustrationPlaceholder: "[INVENTORY_ILLUSTRATION]",
-    illustration: StockIllustration,
+    glowColor: "oklch(0.75 0.2 45)",
   },
   {
+    id: 3,
     number: "03",
     title: "Fulfill",
     description: "Orders auto-sync for same-day pick, pack, and ship",
-    illustrationPlaceholder: "[FULFILLMENT_ILLUSTRATION]",
-    illustration: FulfillIllustration,
+    glowColor: "oklch(0.7 0.2 195)",
   },
   {
+    id: 4,
     number: "04",
     title: "Track",
     description: "Real-time visibility through your dedicated dashboard",
-    illustrationPlaceholder: "[DASHBOARD_ILLUSTRATION]",
-    illustration: TrackIllustration,
-  }
+    glowColor: "oklch(0.75 0.2 45)",
+  },
 ];
 
 export default function ProcessSteps() {
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <section className="section-padding relative overflow-hidden">
+      <div className="container-wide relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-medium font-space-grotesk leading-tight tracking-tight text-black mb-4">
+          <h2 className="text-display-lg text-white mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-black/60 max-w-2xl mx-auto">
+          <p className="text-body-xl text-white/70 max-w-2xl mx-auto">
             Get started in 4 simple steps - from integration to fulfillment in under 2 weeks
           </p>
         </motion.div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="flex flex-col items-center text-center"
-            >
-              {/* Illustration */}
-              <div
-                className={`w-full h-48 rounded-2xl flex items-center justify-center mb-6 overflow-hidden ${
-                  step.illustration || step.customIllustration
-                    ? ""
-                    : "bg-white border-2 border-dashed border-gray-300"
+        <div className="relative">
+          {/* Timeline line */}
+          <div
+            className="absolute bg-gradient-to-b from-transparent via-zinc-700/80 to-transparent left-1/2 transform -translate-x-1/2 w-0.5 h-full hidden lg:block"
+          />
+
+          <div className="space-y-12 lg:space-y-24">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative flex items-center ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
-                {step.customIllustration ? (
-                  <div className="w-full h-full">
-                    {step.customIllustration}
-                  </div>
-                ) : step.illustration ? (
-                  <div className="relative w-full h-full p-6">
-                    <Image
-                      src={step.illustration}
-                      alt={step.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                ) : (
-                  <span className="text-gray-400 font-mono text-xs px-3 py-2 bg-gray-50 rounded border">
-                    {step.illustrationPlaceholder}
-                  </span>
-                )}
-              </div>
+                <div className="w-full lg:w-1/2 px-8">
+                  <motion.div
+                    className="cursor-pointer relative p-8 rounded-3xl transition-all duration-500 border border-white/[0.08] bg-white/[0.05] backdrop-blur-xl shadow-lg shadow-black/20 hover:-translate-y-2 group overflow-hidden"
+                    style={{
+                      ...(activeStep === step.id && {
+                        borderColor: `${step.glowColor} / 0.3`,
+                        boxShadow: `0 0 40px ${step.glowColor} / 0.2`,
+                      }),
+                    }}
+                  >
+                    {/* Glow overlay */}
+                    <div
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"
+                      style={{
+                        background: `radial-gradient(circle at 50% 0%, ${step.glowColor} / 0.15, transparent 70%)`,
+                        filter: "blur(20px)",
+                      }}
+                    ></div>
 
-              {/* Content */}
-              <div className="flex flex-col items-center">
-                <h3 className="text-lg font-medium text-black mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-black/60 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-6">
+                        <div>
+                          <span
+                            className="text-5xl font-bold leading-none font-space-grotesk block mb-4"
+                            style={{
+                              color: "transparent",
+                              WebkitTextStroke: `2px ${step.glowColor}`,
+                              textStroke: `2px ${step.glowColor}`,
+                              filter: `drop-shadow(0 0 8px ${step.glowColor} / 0.4)`,
+                            }}
+                          >
+                            {step.number}
+                          </span>
+                          <h3 className="text-heading-2 text-white mb-2">{step.title}</h3>
+                        </div>
+                      </div>
+
+                      <p className="text-body-lg text-white/80 leading-relaxed">
+                        {step.description}
+                      </p>
+
+                      {/* Decorative Line */}
+                      <div
+                        className="mt-6 w-16 h-1 rounded-full transition-opacity duration-500"
+                        style={{
+                          background: `linear-gradient(to right, ${step.glowColor}, transparent)`,
+                          boxShadow: `0 0 8px ${step.glowColor} / 0.5`,
+                          opacity: activeStep === step.id ? 1 : 0.5,
+                        }}
+                      />
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Timeline dot */}
+                <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center">
+                  <motion.div
+                    className="w-4 h-4 rounded-full border-2 transition-all duration-300"
+                    style={{
+                      backgroundColor: activeStep === step.id ? step.glowColor : "oklch(0.2 0.05 264)",
+                      borderColor: step.glowColor,
+                      boxShadow: activeStep === step.id ? `0 0 20px ${step.glowColor} / 0.6` : "none",
+                    }}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

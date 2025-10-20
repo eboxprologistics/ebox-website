@@ -16,7 +16,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-16 items-center justify-center rounded-full border-2 border-primary/20 bg-white p-3 shadow-lg",
+        "z-10 flex size-16 items-center justify-center rounded-full border-2 border-primary/20 bg-navy-100 p-3 shadow-lg",
         className,
       )}
     >
@@ -146,8 +146,6 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={amazonRef}
         toRef={centerRef}
-        curvature={-75}
-        endYOffset={-10}
         gradientStartColor="#FF9900"
         gradientStopColor="#1E3A8A"
       />
@@ -155,8 +153,6 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={noonRef}
         toRef={centerRef}
-        curvature={75}
-        endYOffset={-10}
         gradientStartColor="#FED530"
         gradientStopColor="#1E3A8A"
       />
@@ -164,8 +160,6 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={shopifyRef}
         toRef={centerRef}
-        curvature={-75}
-        endYOffset={10}
         gradientStartColor="#95BF47"
         gradientStopColor="#1E3A8A"
       />
@@ -173,8 +167,6 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={woocommerceRef}
         toRef={centerRef}
-        curvature={75}
-        endYOffset={10}
         gradientStartColor="#96588A"
         gradientStopColor="#1E3A8A"
       />

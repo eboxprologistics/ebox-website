@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
-import WarehouseIllustration from "@/public/illustrations/warehousing.svg";
-import ComplianceIllustration from "@/public/illustrations/compliant.svg";
 import { IntegrationIllustration } from "@/components/IntegrationIllustration";
+import { WarehouseLottie } from "@/components/WarehouseLottie";
+import { ComplianceLottie } from "@/components/ComplianceLottie";
+import { CardStack } from "@/components/CardStack";
+import ServiceCard from "@/components/ServiceCard";
 
 interface ServiceItem {
   title: string;
@@ -34,7 +34,7 @@ const services: ServiceItem[] = [
       "Same-day dispatch for orders before 8 PM cutoff",
     ],
     illustrationPlaceholder: "[WAREHOUSE_ILLUSTRATION]",
-    illustration: WarehouseIllustration,
+    customIllustration: <WarehouseLottie />,
   },
   {
     title: "Multi-Platform Integration",
@@ -62,167 +62,45 @@ const services: ServiceItem[] = [
       "Ongoing compliance monitoring and updates",
     ],
     illustrationPlaceholder: "[COMPLIANCE_ILLUSTRATION]",
-    illustration: ComplianceIllustration,
+    customIllustration: <ComplianceLottie />,
   },
 ];
 
-const CheckIcon = () => (
-  <svg
-    width="12"
-    height="12"
-    viewBox="0 0 12 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M10 3L4.5 8.5L2 6"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="text-primary"
-    />
-  </svg>
-);
-
 export default function Services({ className }: ServicesProps = {}) {
+  const cards = services.map((service) => ({
+    id: `service-${service.title.toLowerCase().replace(/\s+/g, "-")}`,
+    content: (
+      <ServiceCard
+        title={service.title}
+        subtitle={service.subtitle}
+        description={service.description}
+        features={service.features}
+        illustration={service.illustration}
+        customIllustration={service.customIllustration}
+      />
+    ),
+  }));
+
   return (
-    <section className="py-20 bg-white">
-      <div className="w-full max-w-7xl mx-auto px-4">
-        {/* Header */}
+    <section className="relative">
+      {/* Header */}
+      <div className="container-wide pt-16 lg:pt-24 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-0"
         >
-          <h2 className="text-3xl lg:text-5xl font-medium font-space-grotesk leading-tight tracking-tight text-black mb-4">
-            What We Do
-          </h2>
-          <p className="text-lg text-black/60 max-w-2xl mx-auto">
+          <h2 className="text-display-lg text-white mb-4">What We Do</h2>
+          <p className="text-body-xl text-white/70 max-w-2xl mx-auto">
             Three core services to scale your e-commerce business in UAE
           </p>
         </motion.div>
-
-        {/* Services - Alternating Layout */}
-        <div className="flex flex-col gap-24 lg:gap-32">
-          {services.map((service, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-              >
-                {/* Illustration - Left on even, Right on odd */}
-                <motion.div
-                  initial={{ opacity: 0, x: isEven ? -60 : 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, delay: 0.4 }}
-                  className={`${isEven ? "lg:order-1" : "lg:order-2"}`}
-                >
-                  <div
-                    className={`w-full h-80 lg:h-96 rounded-3xl flex items-center justify-center transition-colors overflow-hidden ${
-                      service.illustration || service.customIllustration
-                        ? ""
-                        : ""
-                    }`}
-                  >
-                    {service.customIllustration ? (
-                      <div className="w-full h-full">
-                        {service.customIllustration}
-                      </div>
-                    ) : service.illustration ? (
-                      <div className="relative w-full h-full p-8">
-                        <Image
-                          src={service.illustration}
-                          alt={service.title}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <span className="text-gray-400 font-mono text-sm px-4 py-2 bg-white rounded border">
-                        {service.illustrationPlaceholder}
-                      </span>
-                    )}
-                  </div>
-                </motion.div>
-
-                {/* Content - Right on even, Left on odd */}
-                <motion.div
-                  initial={{ opacity: 0, x: isEven ? 60 : -60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, delay: 0.5 }}
-                  className={`flex flex-col ${isEven ? "lg:order-2" : "lg:order-1"}`}
-                >
-                  <h3 className="text-2xl lg:text-3xl font-medium font-space-grotesk text-black mb-3">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-base text-primary/80 font-medium mb-4">
-                    {service.subtitle}
-                  </p>
-
-                  <p className="text-black/70 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  {/* Features List */}
-                  <ul className="flex flex-col gap-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <motion.li
-                        key={featureIndex}
-                        initial={{ opacity: 0, x: isEven ? 20 : -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{
-                          duration: 0.5,
-                          delay: 0.6 + featureIndex * 0.1,
-                        }}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                          <CheckIcon />
-                        </div>
-                        <span className="text-black/70 text-sm leading-relaxed">
-                          {feature}
-                        </span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-20"
-        >
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors group no-underline font-medium"
-          >
-            Learn More About Our Services
-            <span className="group-hover:translate-x-1 transition-transform">
-              &rarr;
-            </span>
-          </Link>
-        </motion.div>
       </div>
+
+      {/* Card Stack */}
+      <CardStack cards={cards} />
     </section>
   );
 }
