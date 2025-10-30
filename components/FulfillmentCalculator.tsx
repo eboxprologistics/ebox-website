@@ -97,7 +97,7 @@ export default function FulfillmentCalculator() {
   };
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden bg-white">
+    <section className="py-24 lg:py-32 relative overflow-hidden bg-background">
       <BackgroundBeams className="opacity-30" />
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
@@ -241,7 +241,7 @@ export default function FulfillmentCalculator() {
                       className={`py-4 px-6 rounded-xl border-2 transition-all cursor-pointer ${
                         inputs.packagingType === "standard"
                           ? "border-primary bg-primary/10 text-primary"
-                          : "border-neutral-300 bg-white text-neutral-600 hover:border-neutral-400"
+                          : "border-neutral-300 bg-background text-neutral-600 hover:border-neutral-400"
                       }`}
                     >
                       <div className="font-semibold">Standard</div>
@@ -254,7 +254,7 @@ export default function FulfillmentCalculator() {
                       className={`py-4 px-6 rounded-xl border-2 transition-all cursor-pointer ${
                         inputs.packagingType === "branded"
                           ? "border-primary bg-primary/10 text-primary"
-                          : "border-neutral-300 bg-white text-neutral-600 hover:border-neutral-400"
+                          : "border-neutral-300 bg-background text-neutral-600 hover:border-neutral-400"
                       }`}
                     >
                       <div className="font-semibold">Branded</div>

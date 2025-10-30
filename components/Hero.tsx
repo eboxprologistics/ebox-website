@@ -11,9 +11,9 @@ export default function Hero() {
         {/* Background animation removed */}
 
         <div className="container-wide relative flex items-center z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-5 items-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-6 items-center w-full">
             {/* Left Column - Copy */}
-            <div className="flex flex-col gap-5 lg:gap-8 col-span-2 px-5 items-center lg:items-start">
+            <div className="flex flex-col gap-5 lg:gap-8 col-span-3 px-5 items-center lg:items-start">
               <div className="flex flex-col gap-6 w-full">
                     <div className="text-center lg:text-left">
                   <h1 className="text-white text-balance text-display-xl">

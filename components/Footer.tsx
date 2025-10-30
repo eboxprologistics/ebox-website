@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import FooterCTA from "./FooterCTA";
 
 const footerLinks = {
   services: [
@@ -130,45 +131,10 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gray-900"
+      className="relative overflow-hidden bg-secondary"
     >
       {/* CTA Block */}
-      <div
-        className="z-[2] gap-10 bg-secondary text-white text-center flex flex-col justify-center items-center w-full container-wide -mb-[158px] mx-auto p-12 relative"
-        style={{
-          backgroundImage:
-            "url(https://cdn.prod.website-files.com/6684af61b1cc1eae182f04b5/6684af61b1cc1eae182f04d1_CTA%20BG.png)",
-          backgroundPosition: "50% 0",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "988px",
-        }}
-      >
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-4 max-w-2xl">
-            <h3 className="text-3xl lg:text-6xl font-medium font-space-grotesk leading-tight tracking-tighter text-white">
-              Launch in UAE in 2 Weeks
-            </h3>
-            <p className="text-base leading-6 text-primary-100">
-              From consultation to your first order shipped. Join 100+ brands
-              scaling with our tech-driven 3PL solutions.
-            </p>
-          </div>
-          <div className="flex flex-row items-center justify-center font-space-grotesk flex-wrap gap-4">
-            <div className="text-2xl font-medium text-white">99%+ Accuracy</div>
-            <div className="bg-primary-50 w-1 h-1 mx-1 my-1 rounded-full"></div>
-            <div className="text-2xl font-medium text-white">Same-Day UAE</div>
-            <div className="bg-primary-50 w-1 h-1 mx-1 my-1 rounded-full"></div>
-            <div className="text-2xl font-medium text-white">No MOQ</div>
-          </div>
-        </div>
-        <Link
-          href="/contact"
-          className="bg-white text-neutral-900 px-6 py-3 rounded-full text-sm font-medium hover:bg-surface-hover transition-colors inline-flex w-fit"
-        >
-          Get Free Assessment &nbsp;
-          <span className="text-neutral-500">~ &nbsp;Ebox Pro</span>
-        </Link>
-      </div>
+      <FooterCTA />
 
       {/* Footer Block */}
       <div className="text-white flex flex-col justify-center w-full max-w-[1524px] mx-auto pt-[245px] pb-10 px-[4%] relative overflow-hidden">

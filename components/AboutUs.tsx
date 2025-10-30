@@ -134,7 +134,7 @@ export default function AboutUs() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-center p-6 bg-white rounded-2xl border border-gold-light/50 hover:border-gold-light hover:shadow-gold-sm transition-all group"
+                    className="text-center p-6 bg-background rounded-2xl border border-gold-light/50 hover:border-gold-light hover:shadow-gold-sm transition-all group"
                   >
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gold-light rounded-full mb-4 group-hover:bg-gold-primary/20 transition-colors">
                       <Icon className="w-8 h-8 text-gold-rich" />
@@ -171,7 +171,7 @@ export default function AboutUs() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-center p-6 bg-white rounded-2xl hover:shadow-gold-sm hover:-translate-y-1 transition-all"
+                    className="text-center p-6 bg-background rounded-2xl hover:shadow-gold-sm hover:-translate-y-1 transition-all"
                   >
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-gold-light rounded-full mb-4">
                       <Icon className="w-7 h-7 text-gold-rich" />
@@ -232,7 +232,7 @@ export default function AboutUs() {
             <p className="text-lg text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
               {ourVision.content}
             </p>
-            <div className="max-w-3xl mx-auto p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-gold-light/50">
+            <div className="max-w-3xl mx-auto p-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-gold-light/50">
               <p className="text-gold-dark font-medium italic">
                 {ourVision.mission}
               </p>

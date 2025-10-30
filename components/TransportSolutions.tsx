@@ -59,7 +59,7 @@ export default function TransportSolutions() {
                     height={450}
                     className="w-full aspect-video object-cover"
                   />
-                  <div className="absolute top-2 right-2 bg-white text-text px-2.5 py-0.5 rounded-full text-xs font-medium shadow-lg">
+                  <div className="absolute top-2 right-2 bg-background text-text px-2.5 py-0.5 rounded-full text-xs font-medium shadow-lg">
                     {card.badge}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/24 pointer-events-none" />

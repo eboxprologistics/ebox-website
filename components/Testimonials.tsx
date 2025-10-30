@@ -35,11 +35,11 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-6">
+            <div key={index} className="bg-background rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 {testimonial.content}
               </h3>

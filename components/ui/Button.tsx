@@ -14,7 +14,7 @@ const buttonVariants = cva(
         ghost:
           "text-text-secondary bg-transparent hover:bg-gold-light hover:text-gold-dark",
         outline:
-          "border border-neutral-300 text-text-secondary bg-white hover:border-gold-light hover:bg-gold-light hover:text-white",
+          "border border-neutral-300 text-text-secondary bg-background hover:border-gold-light hover:bg-gold-light hover:text-white",
       },
       size: {
         sm: "px-4 py-2 text-sm",

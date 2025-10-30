@@ -20,7 +20,7 @@ const allLogos = [...clientLogos, ...clientLogos];
 
 export default function LogoMarquee() {
   return (
-    <section className="py-16 bg-white border-t border-b border-neutral-200">
+    <section className="py-16 bg-background border-t border-b border-neutral-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="initial"
@@ -37,8 +37,8 @@ export default function LogoMarquee() {
         {/* Marquee Container */}
         <div className="relative overflow-hidden">
           {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
           
           {/* Scrolling Logo Strip */}
           <motion.div

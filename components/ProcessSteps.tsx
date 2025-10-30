@@ -102,7 +102,7 @@ export default function ProcessSteps() {
                 </motion.div>
 
                 {/* Card */}
-                <div className="bg-white rounded-2xl p-8 h-full shadow-xl transition-all duration-300 hover:-translate-y-1 w-full">
+                <div className="bg-background rounded-2xl p-8 h-full shadow-xl transition-all duration-300 hover:-translate-y-1 w-full">
                   {step.id === 1 && (
                     <div className="w-full aspect-square max-h-32 mb-6 flex items-center justify-center">
                       <DotLottieReact
@@ -180,7 +180,7 @@ export default function ProcessSteps() {
 
                 {/* Card */}
                 <div className="flex-1">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl">
+                  <div className="bg-background rounded-2xl p-6 shadow-xl">
                     {step.id === 1 && (
                       <div className="w-full aspect-square max-h-24 mb-4 flex items-center justify-center">
                         <DotLottieReact

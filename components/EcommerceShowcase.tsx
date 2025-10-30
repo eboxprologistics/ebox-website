@@ -66,7 +66,7 @@ const capabilities = [
 
 export default function EcommerceShowcase() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={staggerContainer}
@@ -105,7 +105,7 @@ export default function EcommerceShowcase() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group relative bg-white rounded-2xl p-6 border border-gold-light/50 hover:border-gold-light hover:shadow-gold-sm hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  className="group relative bg-background rounded-2xl p-6 border border-gold-light/50 hover:border-gold-light hover:shadow-gold-sm hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
                   <div className="relative z-10">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${category.color} mb-4`}>
@@ -177,7 +177,7 @@ export default function EcommerceShowcase() {
               
               {/* Floating stat */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-gold-sm border border-gold-light"
+                className="absolute -top-4 -right-4 bg-background rounded-xl p-4 shadow-gold-sm border border-gold-light"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >

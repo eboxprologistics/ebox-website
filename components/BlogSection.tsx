@@ -42,7 +42,7 @@ const stats = [
 
 export default function BlogSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={staggerContainer}
@@ -76,7 +76,7 @@ export default function BlogSection() {
               <motion.article
                 key={post.id}
                 variants={fadeInUp}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                className="bg-background rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Blog Image */}
                 <div className="h-48 overflow-hidden">
@@ -152,7 +152,7 @@ export default function BlogSection() {
               ))}
             </div>
 
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-300 font-semibold">
+            <button className="bg-background text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-300 font-semibold">
               Apply Now ~ Ebox Pro Logistics
             </button>
           </motion.div>

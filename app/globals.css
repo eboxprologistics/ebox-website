@@ -165,9 +165,9 @@
   --color-accent-950: var(--color-navy-950);
 
   /* Semantic Color Tokens */
-  --color-background: var(--color-base-50);
+  --color-background: oklch(0.99 0.002 240);
   --color-background-subtle: var(--color-base-50);
-  --color-surface: 255 255 255;
+  --color-surface: oklch(0.99 0.002 240);
   --color-surface-hover: var(--color-base-50);
   --color-surface-active: var(--color-base-100);
   --color-surface-subtle: var(--color-base-100);
@@ -280,7 +280,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.99 0.002 240);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -469,7 +469,7 @@
   }
 
   .btn-white {
-    @apply rounded-full bg-white text-foreground px-6 py-3 text-sm lg:text-base font-medium border border-border
+    @apply rounded-full bg-surface text-foreground px-6 py-3 text-sm lg:text-base font-medium border border-border
            hover:bg-surface-hover transition-all duration-300 hover:-translate-y-0.5 cursor-pointer;
   }
 

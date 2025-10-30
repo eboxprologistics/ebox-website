@@ -1,7 +1,6 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
-import Aurora from "@/components/Aurora";
 
 const CHECKMARK_SVG = (
   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
@@ -20,12 +19,8 @@ const bulletPoints = [
 
 export default function ContactFormWrapper() {
   return (
-    <section className="relative bg-[#1A3044] py-20 px-4 md:px-0 flex justify-center items-center overflow-hidden">
-      {/* Aurora Veil Effect */}
-      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none select-none">
-        <Aurora colorStops={['#1E3A8A', '#FF6B35', '#1E3A8A']} amplitude={1.5} blend={0.6} speed={0.8} />
-      </div>
-      <div className="relative max-w-6xl p-8 w-full flex flex-col items-center md:items-stretch md:flex-row gap-12 md:gap-8 lg:gap-28 mx-auto z-10">
+    <section className="relative bg-secondary py-20 px-4 md:px-0 flex justify-center items-center overflow-hidden">
+      <div className="relative max-w-6xl p-8 w-full flex flex-col items-center md:items-stretch md:flex-row gap-12 md:gap-8 lg:gap-28 mx-auto">
         {/* Left: Content */}
         <div className="max-w-xl flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -45,7 +40,7 @@ export default function ContactFormWrapper() {
         </div>
         {/* Right: Form */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="w-full max-w-none md:max-w-md lg:max-w-lg bg-white rounded-2xl shadow-2xl px-16 py-10 md:p-10">
+          <div className="w-full max-w-none md:max-w-md lg:max-w-lg bg-background rounded-2xl shadow-2xl px-16 py-10 md:p-10">
             <ContactForm variant="assessment" />
           </div>
         </div>

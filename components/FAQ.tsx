@@ -50,7 +50,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="section-padding relative bg-white">
+    <section className="section-padding relative bg-background">
       <div className="container-narrow">
         <div className="flex flex-col items-center gap-6">
           <h2 className="text-display-lg text-center text-[#142337] font-bold">
@@ -70,7 +70,7 @@ export default function FAQ() {
               <AccordionItem
                 key={faq.id}
                 value={faq.id}
-                className="bg-white border border-gray-200 rounded-xl mb-2"
+                className="bg-background border border-gray-200 rounded-xl mb-2"
               >
                 <AccordionTrigger
                   className="text-[#142337] text-body-lg font-semibold hover:no-underline px-6 py-5 data-[state=open]:pb-2 transition-all flex items-center justify-between"
