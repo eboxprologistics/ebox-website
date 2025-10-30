@@ -6,6 +6,7 @@ import { TbRocket } from "react-icons/tb";
 import { RiCheckboxMultipleLine } from "react-icons/ri";
 import { Badge } from "./ui/Badge";
 import Threads from "./Threads";
+import Pill from "./ui/Pill";
 
 const usps = [
   {
@@ -43,10 +44,9 @@ export default function KeyUSPs() {
       </div>
 
       <div className="container-wide relative z-10">
-        <div className="mx-auto mb-8 w-fit px-6 py-2.5 rounded-full border border-[#2563eb]/10 bg-[#2563eb]/5 flex items-center gap-3 text-[#2563eb] text-base font-semibold shadow-none">
-          <span className="w-3 h-3 rounded-full bg-[#2563eb]"></span>
+        <Pill color="blue" className="mb-8">
           Why Ebox?
-        </div>
+        </Pill>
         {/* USPs Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {usps.map((usp, index) => {
