@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Background animation removed */}
 
         <div className="container-wide relative flex items-center z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-3 items-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 items-center w-full">
             {/* Left Column - Copy */}
             <div className="flex flex-col gap-5 lg:gap-8 col-span-2 px-5 items-center lg:items-start">
               <div className="flex flex-col gap-6 w-full">
@@ -46,7 +46,7 @@ Leverage our strategic Dubai fulfilment centre to scale your e-commerce business
               </div>
             </div>
             {/* Right Column - Animated Network Map */}
-            <div className="relative w-full h-[450px] lg:h-[600px] col-span-1 z-0 lg:-z-10 my-10 lg:mt-0 filter brightness-120 saturate-150 lg:filter-none">
+            <div className="relative w-full h-[450px] lg:h-[600px] col-span-3 z-0 lg:-z-10 my-10 lg:mt-0 filter brightness-120 saturate-150 lg:filter-none">
               <UAENetworkMap
                 abuDhabi={{ x: 445, y: 325 }}
                 dubai={{ x: 589, y: 161 }}
@@ -106,7 +106,7 @@ Leverage our strategic Dubai fulfilment centre to scale your e-commerce business
                 </div>
               </div>
 
-              <div className="absolute bottom-[10%] left-[40%] w-[200px] z-30 !backdrop-blur-lg bg-white/[0.1] border border-white/[0.12] rounded-2xl p-4 shadow-lg animate-float-gentle">
+              <div className="absolute bottom-[10%] right-[5%] w-[200px] z-30 !backdrop-blur-lg bg-white/[0.1] border border-white/[0.12] rounded-2xl p-4 shadow-lg animate-float-gentle">
                 <div
                   className="border-t border-transparent mb-2"
                   style={{
