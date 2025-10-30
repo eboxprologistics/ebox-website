@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import TechEffects from "@/components/TechEffects";
 
 interface StepItem {
   id: number;
@@ -48,6 +49,9 @@ const steps: StepItem[] = [
 export default function ProcessSteps() {
   return (
     <section className="section-padding relative overflow-hidden bg-secondary">
+      {/* Tech Effects Background */}
+      <TechEffects />
+
       <div className="container-wide relative z-10">
         {/* Header */}
         <motion.div
