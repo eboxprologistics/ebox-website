@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import React, { useRef, ReactNode } from "react";
 
 interface CardItem {
@@ -11,7 +11,7 @@ interface CardItem {
 interface StickyCardProps {
   i: number;
   content: ReactNode;
-  progress: any;
+  progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
 }
@@ -54,11 +54,10 @@ const StickyCard = ({
 
 interface CardStackProps {
   cards: CardItem[];
-  headerText?: string;
   className?: string;
 }
 
-const CardStack = ({ cards, headerText, className = "" }: CardStackProps) => {
+const CardStack = ({ cards, className = "" }: CardStackProps) => {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -78,7 +77,7 @@ const CardStack = ({ cards, headerText, className = "" }: CardStackProps) => {
             i={i}
             content={card.content}
             progress={scrollYProgress}
-            range={[i * 0.1, 1]}
+            range={[i * 0.07, 1]}
             targetScale={targetScale}
           />
         );

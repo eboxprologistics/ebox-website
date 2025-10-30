@@ -22,9 +22,9 @@ export default function Hero() {
         <div className="container-wide relative flex items-center z-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 items-center w-full">
             {/* Left Column - Copy */}
-            <div className="flex flex-col gap-8 col-span-2 px-5">
-              <div className="flex flex-col gap-6">
-                    <div>
+            <div className="flex flex-col gap-5 lg:gap-8 col-span-2 px-5 items-center lg:items-start">
+              <div className="flex flex-col gap-6 w-full">
+                    <div className="text-center lg:text-left">
                   <h1 className="text-white text-balance text-display-xl">
                   All-in-One Fulfillment
                   </h1>
@@ -39,7 +39,7 @@ Leverage our strategic Dubai fulfilment centre to scale your e-commerce business
               </div>
 
               {/* Header Details */}
-              <div className="flex flex-wrap gap-5 text-white mt-8">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-5 text-white mt-6 lg:mt-8">
                 <Link
                   href="/contact"
                   className="py-5! px-12! btn-primary text-center leading-6 no-underline flex items-center justify-center rounded-lg!"
@@ -55,7 +55,7 @@ Leverage our strategic Dubai fulfilment centre to scale your e-commerce business
               </div>
             </div>
             {/* Right Column - Animated Network Map */}
-            <div className="relative w-full h-[450px] lg:h-[600px] col-span-1 -z-10">
+            <div className="relative w-full h-[450px] lg:h-[600px] col-span-1 z-0 lg:-z-10 my-10 lg:mt-0 filter brightness-120 saturate-150 lg:filter-none">
               <UAENetworkMap
                 abuDhabi={{ x: 445, y: 325 }}
                 dubai={{ x: 589, y: 161 }}

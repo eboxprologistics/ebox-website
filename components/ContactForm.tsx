@@ -107,7 +107,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
         </div>
         <button
           type="submit"
-          className="mt-4 w-full bg-[#F26422] hover:bg-[#e85614] text-white text-lg font-bold rounded-md py-3 shadow-[0_2px_8px_0_rgba(242,100,34,0.15)] transition-colors"
+          className="mt-4 w-full bg-[#F26422] hover:bg-[#e85614] text-white text-lg font-bold rounded-md px-4 py-3 shadow-[0_2px_8px_0_rgba(242,100,34,0.15)] transition-colors"
         >
           Request My Free Assessment
         </button>

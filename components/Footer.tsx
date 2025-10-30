@@ -140,7 +140,7 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-[#1e1e1e]"
+      className="relative overflow-hidden bg-[#1e1e1e] border-t border-[#393939]"
     >
       {/* Footer Block */}
       <div className="text-white flex flex-col justify-center w-full max-w-[1524px] mx-auto pt-16 pb-10 px-[4%] relative overflow-hidden">
