@@ -5,6 +5,7 @@ import { HiShieldCheck } from "react-icons/hi";
 import { TbRocket } from "react-icons/tb";
 import { RiCheckboxMultipleLine } from "react-icons/ri";
 import { Badge } from "./ui/Badge";
+import Threads from "./Threads";
 
 const usps = [
   {
@@ -30,6 +31,17 @@ const usps = [
 export default function KeyUSPs() {
   return (
     <section className="section-padding relative overflow-hidden bg-background">
+      {/* Threads Background */}
+      <div className="absolute inset-0 opacity-10">
+        <Threads
+          color={[0.15, 0.23, 0.54]}
+          amplitude={2}
+          distance={0.5}
+          enableMouseInteraction={false}
+          speed={0.3}
+        />
+      </div>
+
       <div className="container-wide relative z-10">
         <div className="mx-auto mb-8 w-fit px-6 py-2.5 rounded-full border border-[#2563eb]/10 bg-[#2563eb]/5 flex items-center gap-3 text-[#2563eb] text-base font-semibold shadow-none">
           <span className="w-3 h-3 rounded-full bg-[#2563eb]"></span>
