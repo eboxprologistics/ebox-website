@@ -90,7 +90,7 @@ export default function Capabilities() {
   );
 
   return (
-    <section className="py-16 lg:py-28 px-4 relative">
+    <section className="section-padding relative">
       <div className="w-full max-w-6xl mx-auto relative z-[2]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -7,7 +7,7 @@ import { Button } from "./ui/Button";
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gold-rich to-gold-primary relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-gold-rich to-gold-primary relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <motion.div

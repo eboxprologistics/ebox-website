@@ -19,7 +19,7 @@ const bulletPoints = [
 
 export default function ContactFormWrapper() {
   return (
-    <section className="relative bg-secondary py-20 flex justify-center items-center overflow-hidden">
+    <section className="section-padding relative bg-secondary flex justify-center items-center overflow-hidden">
       <div className="relative container-wide p-8 w-full flex flex-col items-center md:items-stretch md:flex-row gap-12 md:gap-8 lg:gap-28">
         {/* Left: Content */}
         <div className="max-w-xl flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">

@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ServiceCardProps {
   title: string;
   subtitle: string;
   description: string;
   features: string[];
-  illustration?: any;
+  illustration?: string | StaticImageData;
   customIllustration?: React.ReactNode;
 }
 
@@ -54,7 +54,7 @@ export default function ServiceCard({
               {customIllustration ? (
                 <div className="w-full h-full">{customIllustration}</div>
               ) : illustration ? (
-                <div className="relative w-full h-full p-10 lg:p-12">
+                <div className="relative w-full aspect-[4/3] p-10 lg:p-12">
                   <Image
                     src={illustration}
                     alt={title}

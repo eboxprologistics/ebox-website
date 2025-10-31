@@ -37,7 +37,7 @@ const transportFeatures = [
 
 export default function TransportSolutions() {
   return (
-    <section className="py-16 lg:py-28">
+    <section className="section-padding">
       <div className="w-full max-w-5xl mx-auto px-6">
         {/* Transport Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16 lg:mb-28">

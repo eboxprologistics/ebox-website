@@ -20,7 +20,7 @@ const allLogos = [...clientLogos, ...clientLogos];
 
 export default function LogoMarquee() {
   return (
-    <section className="py-16 bg-background border-t border-b border-neutral-200">
+    <section className="section-padding bg-background border-t border-b border-neutral-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="initial"

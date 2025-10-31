@@ -97,7 +97,7 @@ export default function FulfillmentCalculator() {
   };
 
   return (
-    <section className="pt-24 pb-6 lg:pt-32 relative overflow-hidden bg-background">
+    <section className="section-padding relative overflow-hidden bg-background">
       <BackgroundBeams className="opacity-55" />
       <div className="container-wide relative z-10">
         {/* Header */}

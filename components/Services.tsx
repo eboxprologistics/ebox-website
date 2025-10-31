@@ -82,9 +82,9 @@ export default function Services({ className }: ServicesProps = {}) {
   }));
 
   return (
-    <section className="relative bg-background pb-16">
+    <section className="relative bg-background section-padding">
       {/* Header */}
-      <div className="container-wide pt-16 relative z-10">
+      <div className="container-wide relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
