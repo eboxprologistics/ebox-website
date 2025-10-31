@@ -69,7 +69,7 @@ export default function Header() {
 
             {/* Navigation Center */}
             <div className="flex-1 flex justify-center items-center">
-              <NavigationMenu className="hidden lg:block" viewport={false}>
+              <NavigationMenu className="hidden lg:block">
                 <NavigationMenuList>
                   {/* Home Link */}
                   <NavigationMenuItem>
@@ -163,7 +163,7 @@ export default function Header() {
                       Partner with Us
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="bg-white/95 backdrop-blur-xl border border-white/20">
-                      <ul className="grid gap-1 p-4 md:w-[350px]">
+                      <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         {navigationLinks.partner.map((link) => (
                           <li key={link.name}>
                             <NavigationMenuLink asChild>
@@ -190,7 +190,7 @@ export default function Header() {
                       Company
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="bg-white/95 backdrop-blur-xl border border-white/20">
-                      <ul className="grid gap-1 p-4 md:w-[300px]">
+                      <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         {navigationLinks.company.map((link) => (
                           <li key={link.name}>
                             <NavigationMenuLink asChild>
