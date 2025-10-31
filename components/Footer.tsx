@@ -389,13 +389,15 @@ export default function Footer() {
 
           {/* Footer Legal */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8 border-t footer-border">
-            <div className="text-sm leading-6 footer-text opacity-50">
-              © {new Date().getFullYear()} Ebox Pro. All rights reserved | Built
-              by{" "}
+            <div className="text-sm leading-6 footer-text">
+              <span className="opacity-50">
+                © {new Date().getFullYear()} Ebox Pro. All rights reserved | Built
+                by{" "}
+              </span>
               <Link
                 href="https://xma.ae"
                 target="_blank"
-                className="text-sm footer-text hover:opacity-100 transition-opacity"
+                className="text-sm footer-text opacity-50 hover:opacity-100 transition-opacity"
               >
                 XMA
               </Link>
