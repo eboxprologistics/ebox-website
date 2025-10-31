@@ -257,17 +257,17 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="btn-secondary lg:hidden rounded-full bg-transparent transition-colors duration-300 hover:bg-white/[0.08] hover:backdrop-blur-[8px] flex justify-center items-center p-3 min-h-[44px] min-w-[44px]"
               >
-                <div className="flex flex-col justify-center items-center w-6 h-6 gap-1 p-0">
+                <div className="relative flex flex-col justify-center items-center w-6 h-6">
                   {isMobileMenuOpen ? (
                     <>
-                      <div className="w-4 h-0.5 bg-white rounded-full transform rotate-45 translate-y-0.5"></div>
-                      <div className="w-4 h-0.5 bg-white rounded-full transform -rotate-45 -translate-y-0.5"></div>
+                      <div className="absolute w-5 h-0.5 bg-white rounded-full transform rotate-45"></div>
+                      <div className="absolute w-5 h-0.5 bg-white rounded-full transform -rotate-45"></div>
                     </>
                   ) : (
                     <>
-                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
-                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
-                      <div className="w-4 h-0.5 bg-white rounded-full"></div>
+                      <div className="w-5 h-0.5 bg-white rounded-full mb-1"></div>
+                      <div className="w-5 h-0.5 bg-white rounded-full mb-1"></div>
+                      <div className="w-5 h-0.5 bg-white rounded-full"></div>
                     </>
                   )}
                 </div>
@@ -278,11 +278,11 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden rounded-b-3xl bg-black/[0.1] backdrop-blur-[10px] flex flex-col pb-8 overflow-hidden max-h-[85vh] overflow-y-auto">
+          <div className="lg:hidden rounded-b-3xl bg-white/[0.95] backdrop-blur-xl border border-white/20 flex flex-col pb-8 overflow-hidden max-h-[85vh] overflow-y-auto">
             <div className="flex flex-col">
               {/* Services Section */}
-              <div className="border-b border-black/[0.08]">
-                <div className="text-black px-4 py-4 text-xs font-medium uppercase tracking-wide">
+              <div className="border-b border-base-200">
+                <div className="text-base-900 px-4 py-4 text-xs font-medium uppercase tracking-wide">
                   Services
                 </div>
                 <div className="px-4 pb-4">
@@ -290,12 +290,12 @@ export default function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="flex items-center justify-between text-black/80 hover:text-black px-2 py-3 text-sm transition-colors"
+                      className="flex items-center justify-between text-base-700 hover:text-base-900 hover:bg-base-50 rounded-md px-2 py-3 text-sm transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span>{link.name}</span>
                       {link.new && (
-                        <span className="flex items-center gap-1 text-xs">
+                        <span className="flex items-center gap-1 text-xs text-red-600">
                           <svg
                             width="16"
                             height="16"
@@ -321,8 +321,8 @@ export default function Header() {
               </div>
 
               {/* Solutions Section */}
-              <div className="border-b border-black/[0.08]">
-                <div className="text-black px-4 py-4 text-xs font-medium uppercase tracking-wide">
+              <div className="border-b border-base-200">
+                <div className="text-base-900 px-4 py-4 text-xs font-medium uppercase tracking-wide">
                   Solutions
                 </div>
                 <div className="px-4 pb-4">
@@ -330,12 +330,12 @@ export default function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="flex items-center justify-between text-black/80 hover:text-black px-2 py-3 text-sm transition-colors"
+                      className="flex items-center justify-between text-base-700 hover:text-base-900 hover:bg-base-50 rounded-md px-2 py-3 text-sm transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span>{link.name}</span>
                       {link.new && (
-                        <span className="flex items-center gap-1 text-xs">
+                        <span className="flex items-center gap-1 text-xs text-red-600">
                           <svg
                             width="16"
                             height="16"
@@ -361,8 +361,8 @@ export default function Header() {
               </div>
 
               {/* Partner with Us Section */}
-              <div className="border-b border-black/[0.08]">
-                <div className="text-black px-4 py-4 text-xs font-medium uppercase tracking-wide">
+              <div className="border-b border-base-200">
+                <div className="text-base-900 px-4 py-4 text-xs font-medium uppercase tracking-wide">
                   Partner with Us
                 </div>
                 <div className="px-4 pb-4">
@@ -370,7 +370,7 @@ export default function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="flex items-center justify-between text-black/80 hover:text-black px-2 py-3 text-sm transition-colors"
+                      className="flex items-center justify-between text-base-700 hover:text-base-900 hover:bg-base-50 rounded-md px-2 py-3 text-sm transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span>{link.name}</span>
@@ -380,8 +380,8 @@ export default function Header() {
               </div>
 
               {/* Company Section */}
-              <div className="border-b border-black/[0.08]">
-                <div className="text-black px-4 py-4 text-xs font-medium uppercase tracking-wide">
+              <div className="border-b border-base-200">
+                <div className="text-base-900 px-4 py-4 text-xs font-medium uppercase tracking-wide">
                   Company
                 </div>
                 <div className="px-4 pb-4">
@@ -389,12 +389,12 @@ export default function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="flex items-center justify-between text-black/80 hover:text-black px-2 py-3 text-sm transition-colors"
+                      className="flex items-center justify-between text-base-700 hover:text-base-900 hover:bg-base-50 rounded-md px-2 py-3 text-sm transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span>{link.name}</span>
                       {link.new && (
-                        <span className="flex items-center gap-1 text-xs">
+                        <span className="flex items-center gap-1 text-xs text-red-600">
                           <svg
                             width="16"
                             height="16"
@@ -423,7 +423,7 @@ export default function Header() {
             <div className="flex flex-col items-stretch justify-center mt-6 px-4 gap-2">
               <Link
                 href="#contact"
-                className="btn-secondary rounded-full text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline w-full transition-all duration-300 hover:bg-primary-hover"
+                className="btn-primary rounded-full text-white text-center px-4 py-3 text-sm font-medium leading-6 no-underline w-full"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Free Assessment
