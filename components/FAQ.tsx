@@ -51,7 +51,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="section-padding relative bg-background">
-      <div className="container-narrow">
+      <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 lg:gap-16 items-start">
           {/* Left side - Introduction */}
           <div className="flex flex-col gap-6 lg:sticky lg:top-24">

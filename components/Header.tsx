@@ -69,7 +69,7 @@ export default function Header() {
 
             {/* Navigation Center */}
             <div className="flex-1 flex justify-center items-center">
-              <NavigationMenu className="hidden lg:block">
+              <NavigationMenu className="hidden lg:block" viewport={false}>
                 <NavigationMenuList>
                   {/* Home Link */}
                   <NavigationMenuItem>

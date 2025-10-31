@@ -93,14 +93,16 @@ export default function Services({ className }: ServicesProps = {}) {
           className="text-center"
         >
           <h2 className="text-display-lg text-foreground mb-4">What We Do</h2>
-          <p className="text-body-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body-xl text-muted-foreground mx-auto">
             Three core services to scale your e-commerce business in UAE
           </p>
         </motion.div>
       </div>
 
       {/* Card Stack */}
-      <CardStack cards={cards} />
+      <div className="container-wide">
+        <CardStack cards={cards} />
+      </div>
     </section>
   );
 }

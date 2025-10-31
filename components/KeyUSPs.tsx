@@ -44,9 +44,6 @@ export default function KeyUSPs() {
       </div>
 
       <div className="container-wide relative z-10">
-        <Pill color="blue" className="mb-8">
-          Why Ebox?
-        </Pill>
         {/* USPs Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {usps.map((usp, index) => {

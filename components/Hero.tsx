@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <>
       <section className="relative min-h-screen overflow-hidden bg-secondary flex items-center pt-40 md:pt-32">
-        <div className="container-narrow relative z-20 w-full pb-12">
+        <div className="container-wide relative z-20 w-full pb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left Column - Copy */}
             <div className="flex flex-col gap-8 justify-center">

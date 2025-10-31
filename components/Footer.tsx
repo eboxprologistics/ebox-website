@@ -133,7 +133,7 @@ export default function Footer() {
       className="relative overflow-hidden bg-neutral-50 border-t border-neutral-200"
     >
       {/* Footer Block */}
-      <div className="text-neutral-900 flex flex-col justify-center w-full max-w-[1524px] mx-auto pt-16 pb-10 px-[4%] relative overflow-hidden">
+      <div className="text-neutral-900 flex flex-col justify-center w-full container-wide pt-16 pb-10 relative overflow-hidden">
         <div className="relative z-10">
           {/* Footer Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">

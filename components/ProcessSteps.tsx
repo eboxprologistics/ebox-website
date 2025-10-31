@@ -70,7 +70,7 @@ export default function ProcessSteps() {
 
         {/* Desktop Layout */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto relative">
+          <div className="grid grid-cols-4 gap-6 relative">
             {/* Connecting lines background */}
             <div className="absolute top-10 left-0 right-0 flex items-center px-[10%]">
               <div className="w-full h-0.5 border-t-4 border-dashed border-[#ea580c]/50" />
@@ -106,7 +106,7 @@ export default function ProcessSteps() {
                   {step.id === 1 && (
                     <div className="w-full aspect-square max-h-32 mb-6 flex items-center justify-center">
                       <DotLottieReact
-                        src="https://lottie.host/8d4fbde2-17a3-437c-b356-adca166704d1/oWNaqQr1Sv.lottie"
+                        src="https://lottie.host/5715c593-1b30-4c59-b040-d593bf2f8f99/aAxcNN2CbD.lottie"
                         loop
                         autoplay
                       />

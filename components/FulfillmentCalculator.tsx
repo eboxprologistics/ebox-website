@@ -99,7 +99,7 @@ export default function FulfillmentCalculator() {
   return (
     <section className="pt-24 pb-6 lg:pt-32 relative overflow-hidden bg-background">
       <BackgroundBeams className="opacity-55" />
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container-wide relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <ScrollReveal direction="up" delay={0.2}>

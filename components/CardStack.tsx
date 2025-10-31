@@ -26,13 +26,6 @@ const StickyCard = ({
   const container = useRef<HTMLDivElement>(null);
   const scale = useTransform(progress, range, [1, targetScale]);
 
-  // Apply opacity fade with delay - first card starts at 1, others fade in
-  const opacityRange = i === 0
-    ? [0, 0, 1]
-    : [range[0], range[0] + 0.05, range[0] + 0.15];
-  const opacityValues = i === 0 ? [1, 1, 1] : [0.3, 0.7, 1];
-  const opacity = useTransform(progress, opacityRange, opacityValues);
-
   return (
     <div
       ref={container}
@@ -41,7 +34,6 @@ const StickyCard = ({
       <motion.div
         style={{
           scale,
-          opacity,
           top: `calc(-5vh + ${i * 60 + 80}px)`,
         }}
         className="rounded-4xl relative -top-1/4 flex origin-top flex-col backdrop-blur-sm"
@@ -65,7 +57,7 @@ const CardStack = ({ cards, className = "" }: CardStackProps) => {
   });
 
   return (
-    <main
+    <div
       ref={container}
       className={`relative flex w-full flex-col items-center justify-center pb-[30vh]  ${className}`}
     >
@@ -82,7 +74,7 @@ const CardStack = ({ cards, className = "" }: CardStackProps) => {
           />
         );
       })}
-    </main>
+    </div>
   );
 };
 
