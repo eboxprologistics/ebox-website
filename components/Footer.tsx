@@ -147,9 +147,9 @@ export default function Footer() {
                 <Image
                   src="/Ebox - Final Logo/ebox - final logo -11.svg"
                   alt="Ebox Pro Footer Logo"
-                  width={200}
-                  height={60}
-                  className="h-12 w-auto"
+                  width={280}
+                  height={84}
+                  className="h-16 w-auto"
                 />
               </Link>
               <p className="text-sm leading-relaxed footer-text max-w-xs">
