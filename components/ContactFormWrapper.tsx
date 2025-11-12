@@ -4,9 +4,22 @@ import ContactForm from "@/components/ContactForm";
 import SectionBadge from "@/components/SectionBadge";
 
 const CHECKMARK_SVG = (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="flex-shrink-0"
+  >
     <circle cx="11" cy="11" r="11" fill="#F26422" />
-    <path d="M7 11.5L10 14L15 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M7 11.5L10 14L15 9"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
@@ -20,20 +33,31 @@ const bulletPoints = [
 
 export default function ContactFormWrapper() {
   return (
-    <section className="section-padding relative bg-secondary flex justify-center items-center overflow-hidden">
+    <section
+      id="contact"
+      className="section-padding relative bg-secondary flex justify-center items-center overflow-hidden"
+    >
       <div className="relative container-wide p-8 w-full flex flex-col items-center md:items-stretch md:flex-row gap-12 md:gap-8 lg:gap-28">
         {/* Left: Content */}
         <div className="max-w-xl flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-          <SectionBadge className="bg-white/10 text-white mb-4">Get Started</SectionBadge>
+          <SectionBadge className="bg-white/10 text-white mb-4">
+            Get Started
+          </SectionBadge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Ready to Fulfill Your <br className="hidden sm:inline" /> E-commerce Potential?
+            Ready to Fulfill Your <br className="hidden sm:inline" /> E-commerce
+            Potential?
           </h2>
           <p className="text-lg text-[#bcd0df] mb-8 font-normal">
-            Stop letting logistics limit your growth. Request your free, no-obligation assessment and let our experts build a customized fulfillment plan for you.
+            Stop letting logistics limit your growth. Request your free,
+            no-obligation assessment and let our experts build a customized
+            fulfillment plan for you.
           </p>
           <ul className="flex flex-col gap-6 mx-auto md:mx-0">
             {bulletPoints.map((point) => (
-              <li key={point} className="flex justify-center md:justify-start items-start gap-3 text-white text-base md:text-lg">
+              <li
+                key={point}
+                className="flex justify-center md:justify-start items-start gap-3 text-white text-base md:text-lg"
+              >
                 {CHECKMARK_SVG}
                 <span>{point}</span>
               </li>

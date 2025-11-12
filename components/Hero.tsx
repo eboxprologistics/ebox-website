@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden bg-secondary flex items-center pt-40 md:pt-32">
+      <section className="relative min-h-[80vh] overflow-hidden bg-secondary flex items-center pt-40 md:pt-32">
         <div className="container-wide relative z-20 w-full pb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left Column - Copy */}
@@ -49,14 +49,14 @@ export default function Hero() {
                 }`}
               >
                 <Link
-                  href="/contact"
+                  href="#contact"
                   className="btn-primary text-center leading-6 no-underline flex items-center justify-center w-full whitespace-nowrap"
                   style={{ minWidth: 'fit-content', width: isRowLayout ? 'auto' : '100%' }}
                 >
                   Get Free UAE Fulfillment Assessment
                 </Link>
                 <Link
-                  href="/contact"
+                  href="#calculator"
                   className="btn-white text-center leading-6 no-underline flex items-center justify-center w-full whitespace-nowrap"
                   style={{ minWidth: 'fit-content', width: isRowLayout ? 'auto' : '100%' }}
                 >
@@ -149,7 +149,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <LogoSection />
+      {/* <LogoSection /> */}
     </>
   );
 }

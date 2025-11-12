@@ -7,32 +7,13 @@ import Link from "next/link";
 
 const navigationLinks = {
   services: [
-    { name: "E-commerce Fulfillment", href: "#services" },
-    { name: "Amazon & Noon Integration", href: "#services" },
-    { name: "Same-Day Delivery", href: "#transport", new: true },
-    { name: "Product Registration", href: "#capabilities" },
-    { name: "B2B Distribution", href: "#services" },
-    { name: "Returns Management", href: "#process" },
-  ],
-  solutions: [
-    { name: "Multi-Channel Integration", href: "#capabilities" },
-    { name: "WMS & OXM Platform", href: "#services", new: true },
-    { name: "Inventory Management", href: "#services" },
-    { name: "Custom Packaging", href: "#services" },
-    { name: "Kitting & Bundling", href: "#services" },
-    { name: "COD Processing", href: "#transport" },
-  ],
-  partner: [
-    { name: "Become a Courier Partner", href: "/partner-courier" },
-    { name: "For Brands & Retailers", href: "/partner-brands" },
-    { name: "Apply as a Vendor", href: "/partner-vendor" },
+    { name: "Warehousing & Fulfillment", href: "#services" },
+    { name: "Multi-Platform Integration", href: "#services" },
+    { name: "UAE Market Entry Support", href: "#services" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "How It Works", href: "#process" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact", new: true },
+    { name: "Contact Us", href: "#contact" },
   ],
 };
 
@@ -139,10 +120,10 @@ export default function Footer() {
       {/* Footer Block */}
       <div className="flex flex-col justify-center w-full container-wide pt-16 pb-10 relative overflow-hidden">
         <div className="relative z-10">
-          {/* Brand and Description */}
+          {/* Footer Columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
             {/* Brand Column */}
-            <div className="flex flex-col gap-6">
+            <div className="">
               <Link href="/" className="inline-block">
                 <Image
                   src="/Ebox - Final Logo/ebox - final logo -11.svg"
@@ -152,7 +133,7 @@ export default function Footer() {
                   className="h-16 w-auto"
                 />
               </Link>
-              <p className="text-sm leading-relaxed footer-text max-w-xs">
+              <p className="text-sm leading-relaxed footer-text max-w-xs mb-6">
                 Tech-driven 3PL warehousing and fulfillment at the speed of now. Your strategic partner for e-commerce growth in the UAE.
               </p>
               <div className="flex items-center gap-4">
@@ -170,86 +151,44 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Company Column */}
-            <div className="flex flex-col gap-6">
+            {/* Services Column */}
+            <div className="flex flex-col gap-3">
               <div className="text-xs font-bold leading-5 tracking-wide uppercase footer-heading">
-                Company
+                Services
               </div>
-              <div className="flex flex-col gap-4">
-                {navigationLinks.company.map((link) => (
+              <div className="flex flex-col gap-3">
+                {navigationLinks.services.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="transition-colors text-sm flex items-center gap-2 hover:opacity-80 footer-text"
+                    className="transition-colors text-sm hover:opacity-80 footer-text"
                   >
-                    <div>{link.name}</div>
-                    {link.new && (
-                      <div className="flex items-center gap-1 text-xs">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="8.00016"
-                            cy="8.00016"
-                            r="6.66667"
-                            fill="#F74B45"
-                            fillOpacity="0.16"
-                          />
-                          <circle cx="8" cy="8" r="2" fill="#F74B45" />
-                        </svg>
-                        <div>New</div>
-                      </div>
-                    )}
+                    {link.name}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Services Column */}
-            <div className="flex flex-col gap-6">
+            {/* Company Column */}
+            <div className="flex flex-col gap-3">
               <div className="text-xs font-bold leading-5 tracking-wide uppercase footer-heading">
-                Services
+                Company
               </div>
-              <div className="flex flex-col gap-4">
-                {navigationLinks.services.map((link) => (
+              <div className="flex flex-col gap-3">
+                {navigationLinks.company.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="transition-colors text-sm flex items-center gap-2 hover:opacity-80 footer-text"
+                    className="transition-colors text-sm hover:opacity-80 footer-text"
                   >
-                    <div>{link.name}</div>
-                    {link.new && (
-                      <div className="flex items-center gap-1 text-xs">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="8.00016"
-                            cy="8.00016"
-                            r="6.66667"
-                            fill="#F74B45"
-                            fillOpacity="0.16"
-                          />
-                          <circle cx="8" cy="8" r="2" fill="#F74B45" />
-                        </svg>
-                        <div>New</div>
-                      </div>
-                    )}
+                    {link.name}
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Contact Column */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-3">
               <div className="text-xs font-bold leading-5 tracking-wide uppercase footer-heading">
                 Contact
               </div>
@@ -321,70 +260,6 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-          </div>
-
-          {/* Second Row - Solutions and Partner */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
-            {/* Solutions Column */}
-            <div className="flex flex-col gap-6">
-              <div className="text-xs font-bold leading-5 tracking-wide uppercase footer-heading">
-                Solutions
-              </div>
-              <div className="flex flex-col gap-4">
-                {navigationLinks.solutions.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="transition-colors text-sm flex items-center gap-2 hover:opacity-80 footer-text"
-                  >
-                    <div>{link.name}</div>
-                    {link.new && (
-                      <div className="flex items-center gap-1 text-xs">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="8.00016"
-                            cy="8.00016"
-                            r="6.66667"
-                            fill="#F74B45"
-                            fillOpacity="0.16"
-                          />
-                          <circle cx="8" cy="8" r="2" fill="#F74B45" />
-                        </svg>
-                        <div>New</div>
-                      </div>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Partner Column */}
-            <div className="flex flex-col gap-6">
-              <div className="text-xs font-bold leading-5 tracking-wide uppercase footer-heading">
-                Partner with Us
-              </div>
-              <div className="flex flex-col gap-4">
-                {navigationLinks.partner.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="transition-colors text-sm flex items-center gap-2 hover:opacity-80 footer-text"
-                  >
-                    <div>{link.name}</div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Empty spaces for alignment */}
-            <div className="hidden lg:block"></div>
-            <div className="hidden lg:block"></div>
           </div>
 
           {/* Footer Legal */}

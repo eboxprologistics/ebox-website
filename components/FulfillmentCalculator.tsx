@@ -89,7 +89,7 @@ export default function FulfillmentCalculator() {
 
   const handleInputChange = (
     field: keyof CalculatorInputs,
-    value: number | string
+    value: number | string,
   ) => {
     setInputs((prev) => ({
       ...prev,
@@ -98,7 +98,10 @@ export default function FulfillmentCalculator() {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-background">
+    <section
+      id="calculator"
+      className="section-padding relative overflow-hidden bg-background"
+    >
       <BackgroundBeams className="opacity-55" />
       <div className="container-wide relative z-10">
         {/* Header */}
@@ -145,7 +148,7 @@ export default function FulfillmentCalculator() {
                       onChange={(e) =>
                         handleInputChange(
                           "monthlyOrderVolume",
-                          parseInt(e.target.value)
+                          parseInt(e.target.value),
                         )
                       }
                       className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-primary"
@@ -180,7 +183,7 @@ export default function FulfillmentCalculator() {
                       onChange={(e) =>
                         handleInputChange(
                           "avgOrderWeight",
-                          parseFloat(e.target.value)
+                          parseFloat(e.target.value),
                         )
                       }
                       className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-primary"
@@ -213,7 +216,7 @@ export default function FulfillmentCalculator() {
                       onChange={(e) =>
                         handleInputChange(
                           "storageSpace",
-                          parseInt(e.target.value)
+                          parseInt(e.target.value),
                         )
                       }
                       className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-primary"
@@ -283,7 +286,7 @@ export default function FulfillmentCalculator() {
                       onChange={(e) =>
                         handleInputChange(
                           "returnRate",
-                          parseInt(e.target.value)
+                          parseInt(e.target.value),
                         )
                       }
                       className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-primary"

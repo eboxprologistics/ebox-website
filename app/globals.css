@@ -19,6 +19,10 @@ a {
   font-family: var(--font-secondary);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -91,7 +95,7 @@ a {
   --color-background: oklch(0.99 0.002 240);
   --color-background-subtle: var(--color-base-50);
   --color-surface: oklch(0.99 0.002 240);
-  --color-surface-hover: var(--color-base-50);
+  --color-surface-hover: var(--color-base-300);
   --color-surface-active: var(--color-base-100);
   --color-surface-subtle: var(--color-base-100);
 
@@ -106,7 +110,7 @@ a {
   --color-text-inverse: 255 255 255;
 
   --color-primary: var(--color-primary-400);
-  --color-primary-hover: var(--color-primary-700);
+  --color-primary-hover: var(--color-primary-500);
   --color-primary-active: var(--color-primary-800);
   --color-primary-subtle: var(--color-primary-50);
   --color-primary-text: var(--color-primary-600);
