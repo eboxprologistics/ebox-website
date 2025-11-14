@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="container-wide relative z-20 w-full pb-12">
           <div className="w-fit mx-auto lg:mx-0">
             {/* Left Column - Copy */}
-            <div className="flex flex-col gap-8 justify-center backdrop-blur-md bg-accent-950/50 rounded-xl p-6 md:p-10 lg:p-16">
+            <div className="flex flex-col gap-8 justify-center rounded-xl p-6 md:p-10 lg:p-16">
               <div className="flex flex-col gap-6">
                 <div className="text-center lg:text-left">
                   <h1 className="text-white text-display-xl">
@@ -79,13 +79,8 @@ export default function Hero() {
           </div>
         </div>
         <div className="w-screen top-0 h-screen object-cover -scale-x-100 absolute left-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-          >
+          <div className="absolute inset-0 bg-black/50" />
+          <video autoPlay loop muted playsInline preload="auto">
             <source
               src="https://res.cloudinary.com/dw1j7izud/video/upload/v1762959035/n0ic7gcjgvtbqxydmztc.mp4"
               type="video/mp4"
