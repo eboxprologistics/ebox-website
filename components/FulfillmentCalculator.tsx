@@ -111,7 +111,7 @@ export default function FulfillmentCalculator() {
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <h2 className="text-display-xl text-neutral-900 mb-6">
+            <h2 className="text-display-xl capitalize text-neutral-900 mb-6">
               How much can you
               <span className="block text-primary">actually save?</span>
             </h2>

@@ -54,7 +54,7 @@ export default function FAQ() {
         <div className="">
           <SectionBadge>FAQ</SectionBadge>
           <h2 className="text-display-lg font-bold mb-4">
-            Everything You Need to Know
+            Everything You Need To Know
           </h2>
           <p className="text-body-lg text-gray-500 leading-relaxed">
             Common questions about our 3PL fulfillment services
