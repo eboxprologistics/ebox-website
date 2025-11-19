@@ -109,13 +109,13 @@ html {
   --color-text-muted: var(--color-base-400);
   --color-text-inverse: 255 255 255;
 
-  --color-primary: var(--color-primary-400);
+  --color-primary: #F46f21;
   --color-primary-hover: var(--color-primary-500);
   --color-primary-active: var(--color-primary-800);
   --color-primary-subtle: var(--color-primary-50);
   --color-primary-text: var(--color-primary-600);
 
-  --color-secondary: var(--color-accent-700);
+  --color-secondary: #213559;
   --color-secondary-hover: var(--color-accent-600);
   --color-secondary-active: var(--color-base-800);
   --color-secondary-subtle: var(--color-base-100);
@@ -203,7 +203,7 @@ html {
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --color-secondary-bg: oklch(0.2677 0.0602 251.11);
+  --color-secondary-bg: #203558;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
