@@ -126,11 +126,11 @@ export default function Footer() {
             <div className="">
               <Link href="/" className="inline-block">
                 <Image
-                  src="/Ebox - Final Logo/ebox - final logo -11.svg"
+                  src="/Ebox - Final Logo/ebox - final logo -08.svg"
                   alt="Ebox Pro Footer Logo"
                   width={280}
                   height={84}
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </Link>
               <p className="text-sm leading-relaxed footer-text max-w-xs mb-6">

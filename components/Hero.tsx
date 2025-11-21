@@ -30,12 +30,12 @@ export default function Hero() {
           background:
             "linear-gradient(90deg,rgba(171, 171, 171, 1) 0%, rgba(182, 186, 187, 1) 100%)",
         }}
-        className="relative min-h-screen overflow-hidden flex items-center pt-40 md:pt-32"
+        className="relative min-h-screen overflow-hidden flex items-center pt-40 md:pt-32 z-0"
       >
-        <div className="container-wide relative z-20 w-full pb-12">
+        <div className="container-wide relative z-20 w-full pb-12 mb-28">
           <div className="w-fit mx-auto lg:mx-0">
             {/* Left Column - Copy */}
-            <div className="flex flex-col gap-8 justify-center rounded-xl p-6 md:p-10 lg:p-16">
+            <div className="flex flex-col gap-8 justify-center rounded-xl">
               <div className="flex flex-col gap-6">
                 <div className="text-center lg:text-left">
                   <h1 className="text-display-2xl text-white text-shadow-md">

@@ -176,7 +176,7 @@ export default function ProcessSteps() {
                     </span>
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="w-0.5 h-24 border-l-2 border-dashed border-[#ea580c]/50 my-2" />
+                    <div className="w-0.5 h-24 border-l-2 border-dashed border-[#ea580c]/50 my-2 hidden lg:block" />
                   )}
                 </div>
 

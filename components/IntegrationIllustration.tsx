@@ -106,33 +106,37 @@ export function IntegrationIllustration() {
       className="relative flex h-full w-full items-center justify-center overflow-hidden p-10"
       ref={containerRef}
     >
-      <div className="flex size-full max-w-2xl flex-row items-center justify-between gap-16">
-        {/* Left Side - Stacked Platform Icons */}
-        <div className="flex flex-col items-center justify-center gap-8">
+      <div className="flex size-full max-w-lg flex-col items-stretch justify-between gap-10">
+        {/* Top Row */}
+        <div className="flex flex-row items-center justify-between">
           <Circle ref={amazonRef}>
             <AmazonIcon />
           </Circle>
           <Circle ref={noonRef}>
             <NoonIcon />
           </Circle>
-          <Circle ref={shopifyRef}>
-            <ShopifyIcon />
-          </Circle>
-          <Circle ref={woocommerceRef}>
-            <WooCommerceIcon />
-          </Circle>
         </div>
 
-        {/* Right Side - Ebox Hub */}
+        {/* Center Hub */}
         <div className="flex flex-row items-center justify-center">
           <Circle ref={centerRef} className="size-24">
             <Image
               src={Logo}
               alt="Ebox Logo"
-              width={80}
-              height={80}
-              className="h-16 w-16"
-            />
+              width={64}
+              height={64}
+              className="size-16"
+              />
+          </Circle>
+        </div>
+
+        {/* Bottom Row */}
+        <div className="flex flex-row items-center justify-between">
+          <Circle ref={shopifyRef}>
+            <ShopifyIcon />
+          </Circle>
+          <Circle ref={woocommerceRef}>
+            <WooCommerceIcon />
           </Circle>
         </div>
       </div>
@@ -142,7 +146,7 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={amazonRef}
         toRef={centerRef}
-        duration={2.2}
+        duration={3}
         pathWidth={3}
         pathOpacity={0.15}
         gradientStartColor="#FF9900"
@@ -152,17 +156,18 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={noonRef}
         toRef={centerRef}
-        duration={1.9}
+        duration={3.5}
         pathWidth={3}
         pathOpacity={0.15}
         gradientStartColor="#FED530"
         gradientStopColor="#F26422"
+        reverse
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={shopifyRef}
         toRef={centerRef}
-        duration={2.1}
+        duration={4}
         pathWidth={3}
         pathOpacity={0.15}
         gradientStartColor="#95BF47"
@@ -172,11 +177,12 @@ export function IntegrationIllustration() {
         containerRef={containerRef}
         fromRef={woocommerceRef}
         toRef={centerRef}
-        duration={1.8}
+        duration={3.2}
         pathWidth={3}
         pathOpacity={0.15}
         gradientStartColor="#96588A"
         gradientStopColor="#F26422"
+        reverse
       />
     </div>
   );

@@ -83,7 +83,7 @@ export default function Services({ className }: ServicesProps = {}) {
   }));
 
   return (
-    <section className="relative bg-background section-padding">
+    <section id="services" className="relative bg-background section-padding">
       {/* Header */}
       <div className="container-wide relative z-10">
         <motion.div

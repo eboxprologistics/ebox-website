@@ -57,7 +57,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="John Smith"
             value={formData.name}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -72,7 +72,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="john@company.com"
             value={formData.email}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -87,7 +87,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="Your Company Ltd."
             value={formData.company}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -102,7 +102,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="e.g., 500"
             value={formData.volume}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <button
