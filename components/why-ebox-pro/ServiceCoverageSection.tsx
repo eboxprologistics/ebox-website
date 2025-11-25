@@ -51,15 +51,6 @@ export default function ServiceCoverageSection({
             ))}
           </div>
         </div>
-
-        <div className="mt-12 rounded-3xl bg-linear-to-r from-gold-primary/20 to-gold-rich/20 border border-gold-primary/30 p-8">
-          <p className="text-body-lg text-foreground text-center max-w-4xl mx-auto">
-            With Ebox Pro Logistics managing your entire fulfillment journey,
-            you gain the operational advantages of having local infrastructure
-            in every GCC market without the capital investment and complexity of
-            establishing it yourself.
-          </p>
-        </div>
       </div>
     </section>
   );

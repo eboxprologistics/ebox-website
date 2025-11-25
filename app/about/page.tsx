@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import MissionCard from "@/components/MissionCard";
 import VisionCard from "@/components/VisionCard";
 import AboutFeatureCards from "@/components/AboutFeatureCards";
+import SecondaryCallToAction from "@/components/SecondaryCallToAction";
 
 export const metadata = {
   title: "About Ebox Pro Logistics | Built by Sellers, for Sellers",
@@ -28,6 +29,7 @@ export default function AboutPage() {
         </div>
       </section>
       <AboutUs />
+      <SecondaryCallToAction text="Join hundreds of successful e-commerce brands who trust Ebox Pro Logistics to power their growth in the GCC market." />
       <ContactFormWrapper />
       <Footer />
     </div>
