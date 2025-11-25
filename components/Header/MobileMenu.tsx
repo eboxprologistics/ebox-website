@@ -54,6 +54,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Menu Content */}
             <div className="flex-1 overflow-y-auto">
               <nav className="flex flex-col p-6">
+                {/* What We Do Link */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <Link
+                    href={navigationLinks.whatWeDo.href}
+                    className="flex items-center text-base-900 hover:text-primary-600 rounded-lg px-4 py-4 text-lg font-medium transition-colors border-b border-base-200"
+                    onClick={onClose}
+                  >
+                    {navigationLinks.whatWeDo.name}
+                  </Link>
+                </motion.div>
+
                 {/* Services Section */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}

@@ -84,7 +84,7 @@ export const servicesData: Record<string, ServiceData> = {
     description:
       "Keep your inventory organized and accessible with our state-of-the-art fulfillment center in Dubai, UAE. Strategically positioned for optimal reach and efficiency across the GCC.",
     heroIcon: TbBuildingWarehouse,
-    heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80",
+    heroImage: "/20251125_1527_Warehouse with Forklift_remix_01kaxc4qb5e5es0ax3kc2zbvrz.png",
     illustration: "warehouse",
     accentColor: "navy",
     features: [
@@ -167,7 +167,7 @@ export const servicesData: Record<string, ServiceData> = {
     description:
       "Our trained fulfillment team processes orders with industry-leading speed and 99.9% accuracy. From receiving to delivery, we handle it all.",
     heroIcon: TbPackage,
-    heroImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80",
+    heroImage: "/cardboard-box-conveyor-belt-warehouse.jpg",
     illustration: "fulfillment",
     accentColor: "primary",
     features: [
@@ -261,7 +261,7 @@ export const servicesData: Record<string, ServiceData> = {
     description:
       "Scale your presence on regional marketplaces with our specialized fulfillment services. Connect once, sell everywhere.",
     heroIcon: TbDevices,
-    heroImage: "/shipping-containers-port-terminal.jpg",
+    heroImage: "/warehouse-inventory-tracking-with-digital-interface.jpg",
     illustration: "integration",
     accentColor: "primary",
     features: [
@@ -349,7 +349,7 @@ export const servicesData: Record<string, ServiceData> = {
     description:
       "International brands can leverage our local expertise to enter the GCC market quickly and compliantly. We handle the complexity so you can focus on growth.",
     heroIcon: TbWorld,
-    heroImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80",
+    heroImage: "/futuristic-dubai-landscape.jpg",
     illustration: "compliance",
     accentColor: "navy",
     features: [

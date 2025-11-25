@@ -78,6 +78,9 @@ export default function DesktopNavigation() {
     <div className="flex-1 flex justify-center items-center">
       <NavigationMenu className="hidden lg:block" viewport={false}>
         <NavigationMenuList>
+          <NavLinkItem href={navigationLinks.whatWeDo.href}>
+            {navigationLinks.whatWeDo.name}
+          </NavLinkItem>
           <ServicesDropdown />
           <NavLinkItem href={navigationLinks.about.href}>
             {navigationLinks.about.name}

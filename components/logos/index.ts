@@ -1,0 +1,5 @@
+export { default as Gemini } from './Gemini'
+export { default as Amazon } from './Amazon'
+export { default as Noon } from './Noon'
+export { default as Shopify } from './Shopify'
+export { default as WooCommerce } from './WooCommerce'

@@ -6,6 +6,7 @@ export const navigationLinks = {
     { name: "Distribution & Market Entry", href: "/services/distribution" },
     { name: "Customization & Branding", href: "/services/customization" },
   ],
+  whatWeDo: { name: "What We Do", href: "/what-we-do" },
   about: { name: "About Us", href: "/about" },
   contact: { name: "Contact Us", href: "#contact" },
 };

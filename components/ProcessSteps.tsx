@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import SectionBadge from "@/components/SectionBadge";
 
-
 interface StepItem {
   id: number;
   number: string;
@@ -51,7 +50,6 @@ const steps: StepItem[] = [
 export default function ProcessSteps() {
   return (
     <section className="section-padding relative overflow-hidden bg-secondary">
-
       <div className="container-wide relative z-10">
         {/* Header */}
         <motion.div
@@ -61,7 +59,9 @@ export default function ProcessSteps() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <SectionBadge className="bg-white/10 text-white">How It Works</SectionBadge>
+          <SectionBadge className="bg-white/10 text-white">
+            How It Works
+          </SectionBadge>
           <h2 className="text-display-xl text-white mb-4">
             Your Simple Path to Fulfillment Success
           </h2>
@@ -84,16 +84,32 @@ export default function ProcessSteps() {
                 key={step.id}
                 initial={{ opacity: 0.3, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1, margin: "0px 0px -150px 0px" }}
-                transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                  margin: "0px 0px -150px 0px",
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                }}
                 className="flex flex-col items-center"
               >
                 {/* Circle */}
                 <motion.div
                   initial={{ opacity: 0.3, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, amount: 0.1, margin: "0px 0px -150px 0px" }}
-                  transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                    margin: "0px 0px -150px 0px",
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.15,
+                    ease: "easeOut",
+                  }}
                   className="relative z-10 mb-8"
                 >
                   <div className="w-20 h-20 rounded-full bg-[#ea580c] flex items-center justify-center shadow-lg shadow-orange-500/30">
@@ -104,7 +120,7 @@ export default function ProcessSteps() {
                 </motion.div>
 
                 {/* Card */}
-                <div className="bg-background rounded-2xl p-8 h-full shadow-xl transition-all duration-300 hover:-translate-y-1 w-full">
+                <div className="bg-background rounded-2xl p-8 h-full shadow-sm transition-all duration-300 hover:-translate-y-1 w-full">
                   {step.id === 1 && (
                     <div className="w-full aspect-square max-h-32 mb-6 flex items-center justify-center">
                       <DotLottieReact
@@ -182,7 +198,7 @@ export default function ProcessSteps() {
 
                 {/* Card */}
                 <div className="flex-1">
-                  <div className="bg-background rounded-2xl p-6 shadow-xl">
+                  <div className="bg-background rounded-2xl p-6 shadow-sm">
                     {step.id === 1 && (
                       <div className="w-full aspect-square max-h-24 mb-4 flex items-center justify-center">
                         <DotLottieReact
@@ -238,4 +254,3 @@ export default function ProcessSteps() {
     </section>
   );
 }
-
