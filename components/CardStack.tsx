@@ -1,6 +1,11 @@
 "use client";
 
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 import React, { useRef, ReactNode } from "react";
 
 interface CardItem {
@@ -29,7 +34,7 @@ const StickyCard = ({
   return (
     <div
       ref={container}
-      className="sticky top-0 flex items-center justify-center"
+      className="sticky top-20 flex items-center justify-center"
     >
       <motion.div
         style={{

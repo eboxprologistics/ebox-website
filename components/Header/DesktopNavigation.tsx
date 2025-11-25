@@ -79,6 +79,9 @@ export default function DesktopNavigation() {
       <NavigationMenu className="hidden lg:block" viewport={false}>
         <NavigationMenuList>
           <ServicesDropdown />
+          <NavLinkItem href={navigationLinks.why.href}>
+            {navigationLinks.why.name}
+          </NavLinkItem>
           <NavLinkItem href={navigationLinks.about.href}>
             {navigationLinks.about.name}
           </NavLinkItem>
