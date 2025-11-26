@@ -1,9 +1,4 @@
-import {
-  Noon,
-  Shopify,
-  WooCommerce,
-  Amazon,
-} from "@/components/logos";
+import { Noon, Shopify, WooCommerce, Amazon } from "@/components/logos";
 import { cn } from "@/lib/utils";
 import { Logo } from "../Header";
 import { SiMagento } from "react-icons/si";
@@ -52,14 +47,36 @@ export default function IntegrationsSection() {
               </div>
             </div>
           </div>
-          <div className="bg-linear-to-t from-background relative z-20 mx-auto mt-12 max-w-lg space-y-6 from-55% text-center">
-            <h2 className="text-balance text-3xl font-semibold md:text-4xl">
-              Integrate with your favorite Platforms
-            </h2>
-            <p className="text-muted-foreground">
-              Connect seamlessly with popular platforms and services to enhance
-              your workflow.
-            </p>
+          <div className="bg-linear-to-t from-background relative z-20 mx-auto mt-12 max-w-5xl from-55%">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-start">
+              {/* Left Column */}
+              <div className="relative pr-0 md:pr-6">
+                <h2 className="text-primary text-3xl md:text-4xl font-bold leading-tight text-right">
+                  All-In-One
+                </h2>
+                <span
+                  className="absolute right-0 top-1/2 -translate-y-1/2 h-8 w-0.5 bg-primary-400 rounded-full hidden md:block"
+                  aria-hidden="true"
+                />
+              </div>
+
+              {/* Right Column */}
+              <div className="md:col-span-2 space-y-4">
+                <h2 className="font-normal text-3xl md:text-4xl leading-tight text-foreground">
+                  Seamless Integration & Multi-Channel Fulfillment
+                </h2>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  Connect your store in minutes with integrations for Shopify,
+                  WooCommerce, Amazon, Noon, and custom solutions. Our API
+                  ensures automatic order synchronization, real-time inventory
+                  updates, and complete visibility through your dashboard.
+                  Whether you sell through your website, marketplaces, or B2B
+                  channels, we centralize inventory and streamline fulfillment
+                  across all channels. Intelligent stock allocation ensures
+                  balanced levels and prevents overselling.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,7 +104,7 @@ const IntegrationCard = ({
     <div
       className={cn(
         "relative z-30 flex size-20 rounded-full border bg-white shadow-sm shadow-black/5 dark:bg-white/5 dark:backdrop-blur-md",
-        className,
+        className
       )}
     >
       <div className={cn("m-auto size-fit *:size-10", isCenter && "*:size-8")}>

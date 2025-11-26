@@ -68,7 +68,7 @@ export default function Header() {
         <div className="bg-transparent flex justify-center items-center py-4">
           <div className="flex justify-between items-center w-full container-wide gap-8">
             <Logo />
-            <DesktopNavigation />
+            <DesktopNavigation pathname={pathname} />
 
             {/* CTA and Mobile Menu Right */}
             <div className="flex items-center gap-2">
@@ -81,15 +81,17 @@ export default function Header() {
                 </Link>
               </div>
 
-              <MobileMenuButton
-                isOpen={isMobileMenuOpen}
-                onClick={toggleMobileMenu}
-              />
+              {!isMobileMenuOpen && (
+                <MobileMenuButton
+                  isOpen={isMobileMenuOpen}
+                  onClick={toggleMobileMenu}
+                />
+              )}
             </div>
           </div>
         </div>
 
-        <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} pathname={pathname} />
       </header>
     </>
   );

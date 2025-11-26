@@ -7,6 +7,8 @@ import {
   FulfillmentSection,
   PowerfulToolsSection,
   ValueAddedServices,
+  ImageSection,
+  ReturnsManagement,
   TransportationSection,
 } from "@/components/what-we-do";
 import ContactFormWrapper from "@/components/ContactFormWrapper";
@@ -36,10 +38,22 @@ export default function WhatWeDoPage() {
         {/* <ServicesOverview /> */}
         <WarehousingSection />
         <IntegrationsSection />
-        {/* <TransportationSection /> */}
-        <PowerfulToolsSection />
         <FulfillmentSection />
+        <TransportationSection />
+        <ReturnsManagement />
         <ValueAddedServices />
+        <ImageSection
+          src="/warehouse-inventory-tracking-with-digital-interface.jpg"
+          alt="Modern warehouse with inventory tracking and digital interface"
+          width={1920}
+          height={1080}
+          heading="Distribution & Market Entry Support"
+          description="Expanding to the GCC? We act as your local distribution partner, helping
+international brands navigate import processes, product registration requirements,
+and regulatory compliance. Save months of setup time & fixed cost by leveraging our
+established infrastructure and local expertise."
+        />
+        <PowerfulToolsSection />
         <ContactFormWrapper />
       </main>
       <Footer />

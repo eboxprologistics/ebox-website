@@ -210,15 +210,17 @@ export default function FulfillmentSection() {
             variants={fadeInUp}
             className="text-display-md text-base-900 mt-4 max-w-3xl"
           >
-            Precision Fulfillment at Scale
+            Pick, Pack & Fulfillment
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
             className="text-body-lg text-base-600 mt-4 max-w-2xl"
           >
-            From order receipt to doorstep delivery, our streamlined fulfillment
-            process ensures accuracy, speed, and reliability for every package.
+            When a customer places an order, our team quickly picks, packs, and
+            prepares it within minutes for fast turnaround. Select from custom
+            packaging, branded materials, kitting, gift wrapping, and inserts to
+            create memorable unboxing experiences that strengthen your brand.
           </motion.p>
 
           {/* Stats Row */}

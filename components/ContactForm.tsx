@@ -14,7 +14,10 @@ interface ContactFormProps {
   variant?: "assessment" | "default";
 }
 
-export default function ContactForm({ className, variant = "default" }: ContactFormProps = {}) {
+export default function ContactForm({
+  className,
+  variant = "default",
+}: ContactFormProps = {}) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -57,7 +60,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="John Smith"
             value={formData.name}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input w-full bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -72,7 +75,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="john@company.com"
             value={formData.email}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input w-full bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -87,7 +90,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="Your Company Ltd."
             value={formData.company}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input w-full bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <div>
@@ -102,7 +105,7 @@ export default function ContactForm({ className, variant = "default" }: ContactF
             placeholder="e.g., 500"
             value={formData.volume}
             onChange={handleChange}
-            className="form-input bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
+            className="form-input w-full bg-white/10 border border-white/5 text-white placeholder:text-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <button
@@ -128,8 +131,24 @@ export default function ContactForm({ className, variant = "default" }: ContactF
   // fallback rendering (legacy default variant, can keep or further style if needed)
   return (
     <form onSubmit={handleSubmit} className={className}>
-      <input id="name" name="name" type="text" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-      <input id="email" name="email" type="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Your Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Your Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
       <button type="submit">Submit</button>
       {isSubmitted && <div>Thank you!</div>}
       {hasError && <div>Error.</div>}

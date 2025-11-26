@@ -32,31 +32,31 @@ export default function TransportationSection() {
   const deliveryOptions = {
     "same-day": {
       icon: Zap,
-      title: "Same-Day Delivery",
+      title: "Same-Day Express Delivery",
       description:
-        "Orders placed before our cutoff time are picked, packed, and delivered to customers within the same day. Perfect for urgent orders and time-sensitive products across major UAE cities.",
-      features: ["Dubai, Abu Dhabi, Sharjah coverage", "Before 2PM cutoff", "Real-time tracking"],
+        "Get your products to customers the same day they order. Perfect for urgent orders and time-sensitive deliveries.",
+      features: ["Same-day dispatch", "Major UAE cities", "Real-time tracking"],
     },
     "next-day": {
       icon: Clock,
-      title: "Next-Day Delivery",
+      title: "Next-Day Delivery Across the UAE",
       description:
-        "Reliable overnight delivery service across the UAE and Saudi Arabia. Orders are processed same-day and delivered the following business day with full tracking visibility.",
-      features: ["UAE & KSA wide coverage", "Guaranteed delivery window", "SMS notifications"],
+        "Reliable next-day delivery service ensuring your customers receive their orders the following business day.",
+      features: ["UAE-wide coverage", "Guaranteed delivery window", "Full tracking visibility"],
     },
     "scheduled": {
       icon: Calendar,
-      title: "Scheduled Delivery",
+      title: "Standard Delivery (2-3 Business Days) Throughout the GCC",
       description:
-        "Let your customers choose their preferred delivery date and time slot. Flexible scheduling options improve customer satisfaction and reduce failed delivery attempts.",
-      features: ["Customer-selected time slots", "Flexible rescheduling", "Reduced failed deliveries"],
+        "Cost-effective standard delivery option for customers throughout the GCC region with reliable delivery times.",
+      features: ["GCC-wide coverage", "2-3 business days", "Tracking included"],
     },
     "white-glove": {
       icon: Crown,
-      title: "White-Glove Service",
+      title: "International Shipping to Over 90 Countries",
       description:
-        "Premium handling for high-value, fragile, or oversized items. Includes special packaging, careful handling, and signature confirmation upon delivery.",
-      features: ["Special handling protocols", "Insurance included", "Signature confirmation"],
+        "Expand your reach globally with our international shipping network covering over 90 countries worldwide.",
+      features: ["90+ countries", "Multiple carriers", "Full customs support"],
     },
   };
 
@@ -71,22 +71,23 @@ export default function TransportationSection() {
           className="flex flex-col items-center text-center mb-12"
         >
           <motion.div variants={fadeInUp}>
-            <SectionBadge>Transportation</SectionBadge>
+            <SectionBadge>Delivery</SectionBadge>
           </motion.div>
 
           <motion.h2
             variants={fadeInUp}
             className="text-display-md text-base-900 mt-4 max-w-3xl"
           >
-            Reliable Last-Mile Delivery Network
+            Fast & Flexible Delivery
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
             className="text-body-lg text-base-600 mt-4 max-w-2xl"
           >
-            Our extensive delivery network ensures your products reach customers
-            quickly and reliably across the UAE and Saudi Arabia.
+            Offer your customers delivery options that match their expectations. Our network
+            of trusted last-mile delivery partners ensures reliable service with full tracking
+            and real-time updates.
           </motion.p>
         </motion.div>
 

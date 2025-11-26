@@ -52,11 +52,11 @@ export default function ContactFormWrapper() {
             no-obligation assessment and let our experts build a customized
             fulfillment plan for you.
           </p>
-          <ul className="flex flex-col gap-6 mx-auto md:mx-0">
+          <ul className="flex flex-col gap-6 text-left">
             {bulletPoints.map((point) => (
               <li
                 key={point}
-                className="flex justify-center md:justify-start items-start gap-3 text-white text-base md:text-lg"
+                className="flex justify-start items-start gap-3 text-white text-base md:text-lg"
               >
                 {CHECKMARK_SVG}
                 <span>{point}</span>
@@ -65,7 +65,7 @@ export default function ContactFormWrapper() {
           </ul>
         </div>
         {/* Right: Form */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center w-full">
           <div className="w-full max-w-none md:max-w-md lg:max-w-lg bg-accent-900 rounded-2xl shadow-2xl p-8 md:p-10">
             <ContactForm variant="assessment" />
           </div>

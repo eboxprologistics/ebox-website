@@ -1,16 +1,37 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 import Logo from "./Logo";
 import { navigationLinks } from "./constants";
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  pathname: string;
 }
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({
+  isOpen,
+  onClose,
+  pathname,
+}: MobileMenuProps) {
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    // Set initial hash
+    setHash(window.location.hash);
+
+    // Listen for hash changes
+    const handleHashChange = () => {
+      setHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
   return (
     <AnimatePresence>
       {isOpen && (
@@ -44,9 +65,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 onClick={onClose}
                 className="rounded-full bg-base-100 transition-colors duration-300 hover:bg-base-200 flex justify-center items-center p-3"
               >
-                <div className="relative flex flex-col justify-center items-center w-6 h-6">
-                  <div className="absolute w-5 h-0.5 bg-base-900 rounded-full transform rotate-45" />
-                  <div className="absolute w-5 h-0.5 bg-base-900 rounded-full transform -rotate-45" />
+                <div className="relative flex flex-col justify-center items-center w-5 h-5">
+                  <div className="absolute w-4 h-0.5 bg-base-900 rounded-full transform rotate-45" />
+                  <div className="absolute w-4 h-0.5 bg-base-900 rounded-full transform -rotate-45" />
                 </div>
               </button>
             </div>
@@ -62,10 +83,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   <Link
                     href={navigationLinks.whatWeDo.href}
-                    className="flex items-center text-base-900 hover:text-primary-600 rounded-lg px-4 py-4 text-lg font-medium transition-colors border-b border-base-200"
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === navigationLinks.whatWeDo.href
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
                     onClick={onClose}
                   >
                     {navigationLinks.whatWeDo.name}
+                    {pathname === navigationLinks.whatWeDo.href && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
                   </Link>
                 </motion.div>
 
@@ -76,19 +108,39 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   transition={{ delay: 0.15 }}
                   className="border-b border-base-200"
                 >
-                  <div className="text-base-500 px-4 pt-6 pb-2 text-xs font-semibold uppercase tracking-wider">
+                  <Link
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                    className="relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200 text-base-900 hover:text-primary-600"
+                  >
                     Services
+                  </Link>
+                  <div className="border-l-2 border-l-primary-200 my-2 ml-4">
+                    {navigationLinks.services.map((link) => {
+                      const isActive = link.href === pathname;
+                      return (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          className={cn(
+                            "relative flex items-center rounded-lg pl-6 pr-4 py-3 text-base transition-all",
+                            isActive
+                              ? "text-primary-600 bg-primary-50 font-semibold"
+                              : "text-base-700 hover:text-primary-600 hover:bg-base-50"
+                          )}
+                          onClick={onClose}
+                        >
+                          {link.name}
+                          {isActive && (
+                            <span
+                              className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                              aria-hidden="true"
+                            />
+                          )}
+                        </Link>
+                      );
+                    })}
                   </div>
-                  {navigationLinks.services.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="flex items-center text-base-700 hover:text-primary-600 hover:bg-base-50 rounded-lg px-4 py-3 text-base transition-colors"
-                      onClick={onClose}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
                 </motion.div>
 
                 {/* Why Ebox Pro Link */}
@@ -99,10 +151,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   <Link
                     href={navigationLinks.why.href}
-                    className="flex items-center text-base-900 hover:text-primary-600 rounded-lg px-4 py-4 text-lg font-medium transition-colors border-b border-base-200"
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === navigationLinks.why.href
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
                     onClick={onClose}
                   >
                     {navigationLinks.why.name}
+                    {pathname === navigationLinks.why.href && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
                   </Link>
                 </motion.div>
 
@@ -114,10 +177,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   <Link
                     href={navigationLinks.about.href}
-                    className="flex items-center text-base-900 hover:text-primary-600 rounded-lg px-4 py-4 text-lg font-medium transition-colors border-b border-base-200"
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === navigationLinks.about.href
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
                     onClick={onClose}
                   >
                     {navigationLinks.about.name}
+                    {pathname === navigationLinks.about.href && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
                   </Link>
                 </motion.div>
 
@@ -129,10 +203,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   <Link
                     href={navigationLinks.contact.href}
-                    className="flex items-center text-base-900 hover:text-primary-600 rounded-lg px-4 py-4 text-lg font-medium transition-colors border-b border-base-200"
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === "/" && hash === "#contact"
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
                     onClick={onClose}
                   >
                     {navigationLinks.contact.name}
+                    {pathname === "/" && hash === "#contact" && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
                   </Link>
                 </motion.div>
               </nav>

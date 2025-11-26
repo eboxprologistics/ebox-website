@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Krub } from "next/font/google";
 import "./globals.css";
+import JumpToTop from "@/components/JumpToTop";
 
 const fontPrimary = Inter({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${fontPrimary.variable} ${fontSecondary.variable} antialiased`}
       >
         {children}
+        <JumpToTop />
       </body>
     </html>
   );

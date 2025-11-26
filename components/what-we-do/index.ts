@@ -7,3 +7,5 @@ export { default as TechnologySection } from "./TechnologySection";
 export { default as PowerfulToolsSection } from "./PowerfulToolsSection";
 export { default as ValueAddedServices } from "./ValueAddedServices";
 export { default as WhatWeDoCTA } from "./WhatWeDoCTA";
+export { default as ImageSection } from "./ImageSection";
+export { default as ReturnsManagement } from "./ReturnsManagement";

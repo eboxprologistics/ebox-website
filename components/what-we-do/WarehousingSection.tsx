@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { staggerContainer, fadeInUp, slideInLeft, slideInRight } from "@/lib/animations";
+import { staggerContainer, fadeInUp, slideInRight } from "@/lib/animations";
 import SectionBadge from "@/components/SectionBadge";
 import Link from "next/link";
 import {
@@ -9,10 +9,9 @@ import {
   Shield,
   BarChart3,
   Users,
-  MapPin,
-  Boxes,
+  Eye,
+  Layers,
 } from "lucide-react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { WarehouseLottie } from "../WarehouseLottie";
 
 interface FeatureItemProps {
@@ -35,29 +34,13 @@ function FeatureItem({ icon, title, description }: FeatureItemProps) {
   );
 }
 
-interface LocationCardProps {
-  city: string;
-  country: string;
-}
-
-function LocationCard({ city, country }: LocationCardProps) {
-  return (
-    <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-base-200">
-      <MapPin className="w-5 h-5 text-carrot-500" />
-      <div>
-        <p className="font-semibold text-base-900 text-sm">{city}</p>
-        <p className="text-xs text-base-500">{country}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function WarehousingSection() {
   const features = [
     {
       icon: <Thermometer className="w-5 h-5" />,
       title: "Climate-Controlled Storage",
-      description: "Temperature and humidity controlled facilities for sensitive products.",
+      description:
+        "Temperature and humidity controlled facilities for sensitive products.",
     },
     {
       icon: <Shield className="w-5 h-5" />,
@@ -67,51 +50,77 @@ export default function WarehousingSection() {
     {
       icon: <BarChart3 className="w-5 h-5" />,
       title: "Advanced WMS",
-      description: "Real-time inventory visibility with batch and expiry tracking.",
+      description:
+        "Real-time inventory visibility with batch and expiry tracking.",
     },
     {
       icon: <Users className="w-5 h-5" />,
       title: "Multi-Client Operations",
       description: "Dedicated and shared warehouse options to fit your needs.",
     },
-  ];
-
-  const locations = [
-    { city: "Dubai", country: "UAE" },
-    { city: "Abu Dhabi", country: "UAE" },
-    { city: "Riyadh", country: "Saudi Arabia" },
-    { city: "Jeddah", country: "Saudi Arabia" },
+    {
+      icon: <Eye className="w-5 h-5" />,
+      title: "Real-Time SKU-Level Visibility",
+      description:
+        "Complete real-time visibility with automated alerts at the SKU level.",
+    },
+    {
+      icon: <Layers className="w-5 h-5" />,
+      title: "Smart Lot Tracking",
+      description:
+        "Complete traceability with smart lot tracking capabilities.",
+    },
   ];
 
   return (
     <section id="warehousing" className="section-padding bg-white">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Column - Content */}
+        {/* Badge - Centered across full width */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-4"
+        >
+          <SectionBadge>Warehousing</SectionBadge>
+        </motion.div>
+
+        {/* Heading - Centered below badge */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-display-md text-base-900 text-center mb-12"
+        >
+          Warehousing & Inventory Management
+        </motion.h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
+          {/* Left Column - Features */}
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
+            className="lg:col-span-2"
           >
-            <motion.div variants={slideInLeft}>
-              <SectionBadge>Warehousing</SectionBadge>
-            </motion.div>
-
-            <motion.h2 variants={slideInLeft} className="text-display-md text-base-900 mt-4">
-              Strategic Storage Solutions Across the GCC
-            </motion.h2>
-
-            <motion.p variants={slideInLeft} className="text-body-lg text-base-600 mt-4">
-              Our modern fulfillment centers are strategically positioned to ensure
-              optimal coverage and fast delivery times across the UAE and Saudi Arabia.
-              From small startups to enterprise operations, we scale with your business.
+            <motion.p
+              variants={fadeInUp}
+              className="text-body-lg text-base-600 mb-8"
+            >
+              Keep your inventory organized and accessible with our
+              state-of-the-art fulfillment center based in the UAE.
+              Strategically positioned at the heart of the GCC, our facility
+              serves as the ideal hub to efficiently distribute your products
+              across the entire region.
             </motion.p>
 
             {/* Features Grid */}
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
               {features.map((feature) => (
                 <FeatureItem
@@ -122,12 +131,6 @@ export default function WarehousingSection() {
                 />
               ))}
             </motion.div>
-
-            <motion.div variants={fadeInUp} className="mt-8">
-              <Link href="#contact" className="btn-primary">
-                Get Free Assessment
-              </Link>
-            </motion.div>
           </motion.div>
 
           {/* Right Column - Visual */}
@@ -136,15 +139,30 @@ export default function WarehousingSection() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            className="relative"
+            className="relative flex items-center justify-center lg:col-span-1"
           >
             {/* Capacity Stats */}
-            <WarehouseLottie />
+            <div className="w-full max-w-lg scale-110 lg:scale-125">
+              <WarehouseLottie />
+            </div>
 
             {/* Decorative Element */}
             <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-3xl bg-carrot-100" />
           </motion.div>
         </div>
+
+        {/* Button - Centered across full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 flex justify-center"
+        >
+          <Link href="#contact" className="btn-primary">
+            Get Free Assessment
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,10 +3,10 @@
 import {
   Tag,
   Package,
-  Gift,
-  Camera,
-  CheckCircle,
-  Scissors,
+  DollarSign,
+  Languages,
+  Globe,
+  BarChart3,
   LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -23,25 +23,25 @@ type FeatureItem = {
 const leftFeatures: FeatureItem[] = [
   {
     icon: Tag,
-    title: "Product Labeling",
+    title: "Labeling and Tagging",
     description:
-      "Custom labeling and relabeling services for compliance and branding requirements.",
+      "Professional labeling and tagging services for compliance and branding requirements.",
     position: "left",
     cornerStyle: "sm:translate-x-4 sm:rounded-br-[2px]",
   },
   {
-    icon: Scissors,
-    title: "Kitting & Assembly",
+    icon: Package,
+    title: "B2B and Retail Fulfillment",
     description:
-      "Bundle multiple products together or assemble components before shipping.",
+      "Comprehensive fulfillment solutions for both B2B wholesale and retail distribution channels.",
     position: "left",
     cornerStyle: "sm:-translate-x-4 sm:rounded-br-[2px]",
   },
   {
-    icon: Gift,
-    title: "Gift Wrapping",
+    icon: DollarSign,
+    title: "Cash on Delivery Options",
     description:
-      "Premium gift wrapping and personalized notes for special occasions.",
+      "Flexible payment solutions including cash on delivery to maximize conversion rates.",
     position: "left",
     cornerStyle: "sm:translate-x-4 sm:rounded-tr-[2px]",
   },
@@ -49,26 +49,26 @@ const leftFeatures: FeatureItem[] = [
 
 const rightFeatures: FeatureItem[] = [
   {
-    icon: Package,
-    title: "Custom Packaging",
+    icon: Languages,
+    title: "Multilingual Customer Support",
     description:
-      "Branded packaging solutions that enhance your customer experience.",
+      "Dedicated customer support in multiple languages to serve your diverse customer base.",
     position: "right",
     cornerStyle: "sm:-translate-x-4 sm:rounded-bl-[2px]",
   },
   {
-    icon: Camera,
-    title: "Product Photography",
+    icon: Globe,
+    title: "Importer of Record Services",
     description:
-      "Professional product photography services for your e-commerce listings.",
+      "Complete importer of record services for international brands entering the GCC market.",
     position: "right",
     cornerStyle: "sm:translate-x-4 sm:rounded-bl-[2px]",
   },
   {
-    icon: CheckCircle,
-    title: "Quality Control",
+    icon: BarChart3,
+    title: "Analytics and Reporting",
     description:
-      "Thorough inspection and quality checks before products reach customers.",
+      "Comprehensive analytics and reporting tools to track performance and optimize operations.",
     position: "right",
     cornerStyle: "sm:-translate-x-4 sm:rounded-tl-[2px]",
   },
@@ -118,11 +118,11 @@ export default function ValueAddedServices() {
               <SectionBadge>Value-Added Services</SectionBadge>
             </div>
             <h2 className="text-base-900 mb-2 font-bold text-center sm:mb-2.5 text-4xl">
-              Beyond Standard Fulfillment
+              Value-Added Services
             </h2>
             <p className="text-base-600 mx-auto max-w-[18rem] text-center text-pretty">
-              Enhance your products and customer experience with our
-              comprehensive range of value-added services.
+              Go beyond basic fulfillment with services designed to enhance your
+              operations.
             </p>
           </div>
 

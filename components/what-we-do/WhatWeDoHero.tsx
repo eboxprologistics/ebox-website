@@ -30,8 +30,8 @@ export default function WhatWeDoHero() {
             variants={fadeInUp}
             className="text-display-xl lg:text-display-2xl text-white mt-4 max-w-4xl"
           >
-            End-to-End Logistics{" "}
-            <span className="text-carrot-400">Solutions That Scale</span>
+            End-to-End{" "}
+            <span className="text-carrot-400">E-commerce Fulfillment Solutions</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -39,8 +39,8 @@ export default function WhatWeDoHero() {
             variants={fadeInUp}
             className="text-body-xl text-white/80 mt-6 max-w-2xl"
           >
-            From warehousing to last-mile delivery, we provide comprehensive 3PL services
-            that power your growth across UAE and Saudi Arabia.
+            We take care of everything from the moment your products arrive at our facility
+            to the moment they reach your customers' doorsteps—and beyond.
           </motion.p>
 
           {/* CTA Buttons */}
