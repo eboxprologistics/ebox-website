@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Logo from "./Logo";
@@ -19,8 +20,10 @@ export default function MobileMenu({
   pathname,
 }: MobileMenuProps) {
   const [hash, setHash] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Set initial hash
     setHash(window.location.hash);
 
@@ -32,7 +35,8 @@ export default function MobileMenu({
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
-  return (
+
+  const menuContent = (
     <AnimatePresence>
       {isOpen && (
         <>
@@ -42,7 +46,7 @@ export default function MobileMenu({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998] lg:hidden"
             onClick={onClose}
           />
 
@@ -56,7 +60,7 @@ export default function MobileMenu({
               damping: 30,
               stiffness: 300,
             }}
-            className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-white z-40 lg:hidden flex flex-col"
+            className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-white z-[9999] lg:hidden flex flex-col"
           >
             {/* Menu Header with Logo and Close */}
             <div className="flex justify-between items-center p-6 border-b border-base-200">
@@ -243,4 +247,8 @@ export default function MobileMenu({
       )}
     </AnimatePresence>
   );
+
+  if (!mounted) return null;
+
+  return createPortal(menuContent, document.body);
 }
