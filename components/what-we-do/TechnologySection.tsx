@@ -54,7 +54,7 @@ export default function IntegrationsSection() {
           </div>
           <div className="bg-linear-to-t from-background relative z-20 mx-auto mt-12 max-w-lg space-y-6 from-55% text-center">
             <h2 className="text-balance text-3xl font-semibold md:text-4xl">
-              Integrate with your favorite tools
+              Integrate with your favorite Platforms
             </h2>
             <p className="text-muted-foreground">
               Connect seamlessly with popular platforms and services to enhance

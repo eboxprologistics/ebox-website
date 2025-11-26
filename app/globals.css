@@ -340,7 +340,7 @@ html {
 
   /* Typography Scale */
   .text-display-2xl {
-    @apply text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight;
+    @apply text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight;
   }
 
   .text-display-xl {

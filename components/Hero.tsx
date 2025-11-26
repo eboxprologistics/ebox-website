@@ -32,42 +32,43 @@ export default function Hero() {
         }}
         className="relative min-h-screen overflow-hidden flex items-center pt-40 md:pt-32 z-0"
       >
-        <div className="container-wide relative z-20 w-full pb-12 mb-28">
-          <div className="w-fit mx-auto lg:mx-0">
-            {/* Left Column - Copy */}
-            <div className="flex flex-col gap-8 justify-center rounded-xl">
-              <div className="flex flex-col gap-6">
+        <div className="container-wide relative z-20 w-full pb-12 mb-54">
+          <div className="w-fit mx-auto">
+            <div className="flex flex-col justify-center items-center rounded-xl">
+              <div className="flex flex-col justify-center gap-6 items-center">
                 <div className="text-center lg:text-left">
-                  <h1 className="text-display-2xl text-white text-shadow-md">
-                    Scale Your E-Commerce <br className="hidden md:block" />{" "}
-                    with Smart Delivery in GCC
+                  <div
+                    className={`inline-flex mb-10 lg:mb-16 mx-auto items-center px-4 py-2 rounded-full backdrop-blur-sm bg-white/10 border border-white/20`}
+                  >
+                    <p className={`text-lg font-bold text-white`}>
+                      WE DELIVER. YOU GROW.
+                    </p>
+                  </div>
+                  <h1 className="text-display-2xl max-w-[100px] mx-auto lg:mb-20 mb-10 h-20 flex items-center justify-center text-center wrap-break-word capitalize text-white text-shadow-md w-full">
+                    {/* Scale Your <br/> E-Commerce With <br className="hidden md:block" />{" "} */}
+                    {/* All-In-One Fulfillment In GCC  */}
+                    {/* All-In-One Fulfillment To Scale Your <br />E-Commerce In GCC  */}
+                    <FlipWords
+                      duration={2000}
+                      className="text-white text-center"
+                      words={[
+                        "All-In-One Fulfillment",
+                        "Smart Logistics",
+                        "Seamless Speed",
+                      ]}
+                    />
                   </h1>
-                  <p className="text-white/80 text-shadow-md text-body-xl mt-6 max-w-2xl mx-auto lg:mx-0">
-                    Strategic Dubai warehouse location with real-time inventory
-                    management. Seamless multi-channel integration for Amazon,
-                    Noon, and your store.
-                  </p>
                 </div>
               </div>
 
               {/* CTA Buttons */}
               <div
-                className={`flex gap-4 text-white w-full ${
+                className={`flex items-center justify-center gap-4 text-white w-full ${
                   isRowLayout
-                    ? "flex-row items-start justify-start max-w-none"
+                    ? "flex-row-reverse items-start justify-start max-w-none"
                     : "flex-col items-center justify-center max-w-lg mx-auto lg:mx-0 lg:items-start lg:justify-start"
                 }`}
               >
-                <Link
-                  href="#contact"
-                  className="btn-primary text-center leading-6 no-underline flex items-center justify-center w-full whitespace-nowrap"
-                  style={{
-                    minWidth: "fit-content",
-                    width: isRowLayout ? "auto" : "100%",
-                  }}
-                >
-                  Get Free UAE Fulfillment Assessment
-                </Link>
                 <Link
                   href="#calculator"
                   className="btn-white text-center leading-6 no-underline flex items-center justify-center w-full whitespace-nowrap"
@@ -77,6 +78,16 @@ export default function Hero() {
                   }}
                 >
                   Calculate Your Savings
+                </Link>
+                <Link
+                  href="#contact"
+                  className="btn-primary text-center leading-6 no-underline flex items-center justify-center w-full whitespace-nowrap"
+                  style={{
+                    minWidth: "fit-content",
+                    width: isRowLayout ? "auto" : "100%",
+                  }}
+                >
+                  Get Free Fulfillment Assessment
                 </Link>
               </div>
             </div>
@@ -93,7 +104,10 @@ export default function Hero() {
             playsInline
             preload="auto"
           >
-            <source src="https://res.cloudinary.com/dw1j7izud/video/upload/v1763121970/oaionac7fkd5g7rwqemf.mp4" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/dw1j7izud/video/upload/v1763121970/oaionac7fkd5g7rwqemf.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
