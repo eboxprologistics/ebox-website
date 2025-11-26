@@ -5,10 +5,10 @@ import { SiMagento } from "react-icons/si";
 
 export default function IntegrationsSection() {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="section-padding">
         <div className="mx-auto max-w-5xl px-6">
-          <div className="aspect-16/10 group relative mx-auto flex container items-center justify-between sm:max-w-xl">
+          <div className="aspect-[16/10] group relative mx-auto flex container items-center justify-between sm:max-w-xl overflow-hidden">
             <div
               role="presentation"
               className="bg-linear-to-b border-foreground/5 absolute inset-0 z-10 aspect-square animate-spin items-center justify-center rounded-full border-t from-navy-500/15 to-transparent to-25% opacity-0 duration-[3.5s] group-hover:opacity-100 dark:from-white/5"
@@ -47,7 +47,7 @@ export default function IntegrationsSection() {
               </div>
             </div>
           </div>
-          <div className="bg-linear-to-t from-background relative z-20 mx-auto mt-12 max-w-5xl from-55%">
+          <div className="bg-linear-to-t from-background relative mx-auto mt-12 max-w-5xl from-55%">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-start">
               {/* Left Column */}
               <div className="relative pr-0 md:pr-6">
