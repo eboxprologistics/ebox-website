@@ -94,7 +94,7 @@ export default function Services({ className }: ServicesProps = {}) {
   return (
     <section
       id="services"
-      className={cn("relative bg-background section-padding", className)}
+      className={cn("relative bg-background md:section-padding pb-32", className)}
     >
       {/* Header */}
       <div className="container-wide relative z-10">

@@ -133,7 +133,7 @@ export default function WarehousingSection() {
               ))}
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="mt-14 text-center">
+            <motion.div variants={fadeInUp} className="mt-14">
               <Link href="#contact" className="btn-primary">
                 Get Free Assessment
               </Link>
