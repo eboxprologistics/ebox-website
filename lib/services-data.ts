@@ -38,12 +38,7 @@ import {
   TbHistory,
   TbBuildingStore,
 } from "react-icons/tb";
-import {
-  SiAmazon,
-  SiShopify,
-  SiWoo,
-  SiMagento,
-} from "react-icons/si";
+import { SiAmazon, SiShopify, SiWoo, SiMagento } from "react-icons/si";
 
 export interface ServiceFeature {
   icon: IconType;
@@ -57,7 +52,12 @@ export interface ServiceStat {
   label: string;
 }
 
-export type IllustrationType = "warehouse" | "integration" | "compliance" | "fulfillment" | "customization";
+export type IllustrationType =
+  | "warehouse"
+  | "integration"
+  | "compliance"
+  | "fulfillment"
+  | "customization";
 
 export interface ServiceData {
   slug: string;
@@ -84,7 +84,8 @@ export const servicesData: Record<string, ServiceData> = {
     description:
       "Keep your inventory organized and accessible with our state-of-the-art fulfillment center in Dubai, UAE. Strategically positioned for optimal reach and efficiency across the GCC.",
     heroIcon: TbBuildingWarehouse,
-    heroImage: "/20251125_1527_Warehouse with Forklift_remix_01kaxc4qb5e5es0ax3kc2zbvrz.png",
+    heroImage:
+      "/20251125_1527_Warehouse with Forklift_remix_01kaxc4qb5e5es0ax3kc2zbvrz.png",
     illustration: "warehouse",
     accentColor: "navy",
     features: [
@@ -181,8 +182,7 @@ export const servicesData: Record<string, ServiceData> = {
       {
         icon: TbChecks,
         title: "Quality Control Checks",
-        description:
-          "Multi-point verification to ensure 100% order accuracy.",
+        description: "Multi-point verification to ensure 100% order accuracy.",
         featured: true,
       },
       {
@@ -214,7 +214,8 @@ export const servicesData: Record<string, ServiceData> = {
       {
         icon: TbBox,
         title: "Custom Branded Packaging",
-        description: "Create memorable unboxing experiences for your customers.",
+        description:
+          "Create memorable unboxing experiences for your customers.",
       },
       {
         icon: TbGift,
@@ -302,7 +303,8 @@ export const servicesData: Record<string, ServiceData> = {
       {
         icon: SiAmazon,
         title: "Amazon UAE & KSA",
-        description: "Full integration with Amazon's UAE and Saudi marketplaces.",
+        description:
+          "Full integration with Amazon's UAE and Saudi marketplaces.",
       },
       {
         icon: TbBuildingStore,
@@ -339,6 +341,75 @@ export const servicesData: Record<string, ServiceData> = {
       title: "Marketplace Fulfillment Services | Ebox Pro Logistics",
       description:
         "Seamless Amazon, Noon, Shopify, and WooCommerce fulfillment in the GCC. FBA/FBN replenishment and FBM services with real-time inventory sync.",
+    },
+  },
+
+  customization: {
+    slug: "customization",
+    title: "Customization & Branding",
+    tagline: "Make Every Delivery a Brand Experience",
+    description:
+      "Stand out from the competition with customized packaging and presentation that reinforces your brand identity at every touchpoint.",
+    heroIcon: TbPalette,
+    heroImage: "/brand-box.png",
+    illustration: "customization",
+    accentColor: "primary",
+    features: [
+      {
+        icon: TbBox,
+        title: "Custom Branded Boxes",
+        description:
+          "Custom branded boxes and mailers that showcase your brand identity.",
+        featured: true,
+      },
+      {
+        icon: TbSticker,
+        title: "Branded Materials",
+        description:
+          "Branded packing tape, tissue paper, logo stickers, and thank-you cards.",
+        featured: true,
+      },
+      {
+        icon: TbAd,
+        title: "Promotional Flyers",
+        description:
+          "Product catalogs and promotional materials included with orders.",
+      },
+      {
+        icon: TbQrcode,
+        title: "QR Code Integration",
+        description:
+          "QR codes for customer engagement, reviews, and repeat purchases.",
+      },
+      {
+        icon: TbRecycle,
+        title: "Eco-Friendly Options",
+        description:
+          "Sustainable and eco-friendly packaging options for conscious brands.",
+      },
+      {
+        icon: TbDiamond,
+        title: "Luxury Packaging",
+        description:
+          "Premium packaging solutions for luxury and high-end products.",
+      },
+      {
+        icon: TbCalendarEvent,
+        title: "Seasonal Packaging",
+        description:
+          "Campaign-specific and seasonal packaging for special occasions.",
+      },
+      {
+        icon: TbGift,
+        title: "Gift Wrapping",
+        description: "Professional gift wrapping with personalized messages.",
+      },
+    ],
+    advancedFeatures: [],
+    meta: {
+      title: "Customization & Branding Services | Ebox Pro Logistics",
+      description:
+        "Transform every delivery into a brand experience with custom packaging, eco-friendly options, and luxury unboxing solutions in the GCC.",
     },
   },
 
@@ -403,76 +474,6 @@ export const servicesData: Record<string, ServiceData> = {
       title: "Distribution & Market Entry Services | Ebox Pro Logistics",
       description:
         "Enter the GCC market quickly with our IOR/EOR services, customs clearance, and product registration. Save $10,000+ and 6+ months on market entry.",
-    },
-  },
-
-  customization: {
-    slug: "customization",
-    title: "Customization & Branding",
-    tagline: "Make Every Delivery a Brand Experience",
-    description:
-      "Stand out from the competition with customized packaging and presentation that reinforces your brand identity at every touchpoint.",
-    heroIcon: TbPalette,
-    heroImage: "/brand-box.png",
-    illustration: "customization",
-    accentColor: "primary",
-    features: [
-      {
-        icon: TbBox,
-        title: "Custom Branded Boxes",
-        description:
-          "Custom branded boxes and mailers that showcase your brand identity.",
-        featured: true,
-      },
-      {
-        icon: TbSticker,
-        title: "Branded Materials",
-        description:
-          "Branded packing tape, tissue paper, logo stickers, and thank-you cards.",
-        featured: true,
-      },
-      {
-        icon: TbAd,
-        title: "Promotional Flyers",
-        description:
-          "Product catalogs and promotional materials included with orders.",
-      },
-      {
-        icon: TbQrcode,
-        title: "QR Code Integration",
-        description:
-          "QR codes for customer engagement, reviews, and repeat purchases.",
-      },
-      {
-        icon: TbRecycle,
-        title: "Eco-Friendly Options",
-        description:
-          "Sustainable and eco-friendly packaging options for conscious brands.",
-      },
-      {
-        icon: TbDiamond,
-        title: "Luxury Packaging",
-        description:
-          "Premium packaging solutions for luxury and high-end products.",
-      },
-      {
-        icon: TbCalendarEvent,
-        title: "Seasonal Packaging",
-        description:
-          "Campaign-specific and seasonal packaging for special occasions.",
-      },
-      {
-        icon: TbGift,
-        title: "Gift Wrapping",
-        description:
-          "Professional gift wrapping with personalized messages.",
-      },
-    ],
-    advancedFeatures: [],
-    meta: {
-      title: "Customization & Branding Services | Ebox Pro Logistics",
-      description:
-        "Transform every delivery into a brand experience with custom packaging, eco-friendly options, and luxury unboxing solutions in the GCC.",
     },
   },
 };
