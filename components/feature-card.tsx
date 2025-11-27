@@ -32,13 +32,13 @@ export function FeatureCard({
       </div>
       <feature.icon
         aria-hidden
-        className="size-9 text-primary"
+        className="size-11 text-primary"
         strokeWidth={2}
       />
-      <h3 className="mt-8 text-lg md:text-xl font-semibold text-foreground">
+      <h3 className="mt-4 text-lg md:text-xl font-semibold text-foreground">
         {feature.title}
       </h3>
-      <p className="relative z-20 mt-2 text-muted-foreground text-base leading-relaxed">
+      <p className="relative z-20 mt-1 text-muted-foreground text-base leading-relaxed">
         {feature.description}
       </p>
     </div>
