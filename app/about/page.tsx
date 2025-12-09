@@ -25,7 +25,7 @@ export default function AboutPage() {
             <SectionBadge>Our Mission</SectionBadge>
           </div>
           <TextGradientScroll
-            text="To be the most trusted and innovative fulfillment partner for e-commerce businesses expanding across the Middle East."
+            text="To be the most trusted and innovative fulfillment partner for e&#8209;commerce businesses expanding across the Middle East."
             className="text-display-md lg:text-display-lg font-normal! leading-relaxed text-center"
           ></TextGradientScroll>
         </div>

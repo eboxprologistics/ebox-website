@@ -91,6 +91,9 @@ html {
   --color-accent-900: var(--color-navy-900);
   --color-accent-950: var(--color-navy-950);
 
+  --color-success: var(--color-green-500);
+  --color-success-subtle: var(--color-green-100);
+
   /* Semantic Color Tokens */
   --color-background: oklch(0.99 0.002 240);
   --color-background-subtle: var(--color-base-50);

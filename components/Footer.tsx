@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 const navigationLinks = {
   services: [
@@ -128,17 +128,11 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
             {/* Brand Column */}
             <div className="">
-              <Link href="/" className="inline-block">
-                <Image
-                  src="/Ebox - Final Logo/ebox pro logistics blue.png"
-                  alt="Ebox Pro Footer Logo"
-                  width={280}
-                  height={84}
-                  className="h-14 w-auto mb-2"
-                />
-              </Link>
+              <div className="mb-2">
+                <Logo variant="dark" size="lg" />
+              </div>
               <p className="text-sm leading-relaxed footer-text max-w-xs mb-6">
-                Tech-driven 3PL warehousing and fulfillment at the speed of now. Your strategic partner for e-commerce growth in the UAE.
+                Tech-driven 3PL warehousing and fulfillment at the speed of now. Your strategic partner for <span className="whitespace-nowrap">e-commerce</span> growth in the UAE.
               </p>
               <div className="flex items-center gap-4">
                 {socialLinks.map((social) => (

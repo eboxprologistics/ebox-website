@@ -32,7 +32,7 @@ export default function GetStartedCTA() {
             Get Started Today
           </h2>
           <p className="text-body-xl text-white/80 text-shadow-sm max-w-2xl mx-auto">
-            Ready to eliminate logistics headaches and scale your e-commerce
+            Ready to eliminate logistics headaches and scale your <span className="whitespace-nowrap">e-commerce</span>
             business?
           </p>
         </div>

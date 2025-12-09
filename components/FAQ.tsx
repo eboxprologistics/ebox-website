@@ -43,7 +43,7 @@ const faqs = [
     id: "6",
     question: "Which platforms do you integrate with?",
     answer:
-      "We integrate with all major e-commerce platforms including Amazon (SPN Partner), Noon, Shopify, WooCommerce, Magento, and custom solutions. Integration typically takes 1-3 business days.",
+      "We integrate with all major e\u2011commerce platforms including Amazon (SPN Partner), Noon, Shopify, WooCommerce, Magento, and custom solutions. Integration typically takes 1-3 business days.",
   },
 ];
 

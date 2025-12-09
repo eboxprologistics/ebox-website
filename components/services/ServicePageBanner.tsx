@@ -13,7 +13,7 @@ export default function ServicePageBanner() {
           className="text-center"
         >
           <p className="text-white/90 text-sm lg:text-base font-medium">
-            Complete E-Commerce Fulfillment Solutions for the GCC Market
+            Complete <span className="whitespace-nowrap">E&#8209;Commerce</span> Fulfillment Solutions for the GCC Market
           </p>
         </motion.div>
       </div>

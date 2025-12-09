@@ -31,7 +31,7 @@ export default function WhatWeDoHero() {
             className="text-display-xl lg:text-display-2xl text-white mt-4 max-w-4xl"
           >
             All-In-One <br />
-            <span className="text-carrot-400">E-commerce Fulfillment Solutions</span>
+            <span className="text-carrot-400 whitespace-nowrap">E-commerce</span> <span className="text-carrot-400">Fulfillment Solutions</span>
           </motion.h1>
 
           {/* Subheadline */}

@@ -28,7 +28,7 @@ export default function HeroSection() {
           {/* Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="text-display-xl lg:text-display-2xl text-white mt-4 max-w-4xl"
+            className="text-display-xl lg:text-display-2xl text-white mt-4 max-w-4xl text-balance"
           >
             Why Choose{" "}
             <span className="text-carrot-400">Ebox Pro?</span>
@@ -40,7 +40,7 @@ export default function HeroSection() {
             className="text-body-xl text-white/80 mt-6 max-w-2xl"
           >
             At Ebox Pro, we understand that reliable fulfillment is
-            essential to your e-commerce success. Our services are designed to
+            essential to your <span className="whitespace-nowrap">e-commerce</span> success. Our services are designed to
             help you scale your business while maintaining the quality and
             consistency your customers expect.
           </motion.p>

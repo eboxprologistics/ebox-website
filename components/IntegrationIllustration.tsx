@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/AnimatedBeam";
 import Image from "next/image";
 import NoonLogo from "@/public/illustrations/noon-com-vector-logo-seeklogo/noon-com-seeklogo.svg";
-import Logo from "@/public/Ebox - Final Logo/ebox - final logo -08.svg";
+import Logo from "@/components/Logo";
 
 export function IntegrationIllustration() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,13 +50,7 @@ export function IntegrationIllustration() {
         {/* Center Hub */}
         <div className="flex flex-row items-center justify-center">
           <Circle ref={centerRef} className="size-20 sm:size-24">
-            <Image
-              src={Logo}
-              alt="Ebox Logo"
-              width={64}
-              height={64}
-              className="size-14 sm:size-16"
-            />
+            <Logo variant="dark" size="sm" asLink={false} className="w-fit" />
           </Circle>
         </div>
 

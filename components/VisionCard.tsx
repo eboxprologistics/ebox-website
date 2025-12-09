@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const visionStatement =
-  "To be the most trusted fulfillment partner for e-commerce businesses expanding across the Middle East—enabling brands to compete globally while thinking locally.";
+  "To be the most trusted fulfillment partner for e\u2011commerce businesses expanding across the Middle East—enabling brands to compete globally while thinking locally.";
 
 export default function VisionCard() {
   return (

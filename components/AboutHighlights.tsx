@@ -30,7 +30,7 @@ export default function AboutHighlights() {
             variants={fadeInUp}
             className="text-display-xl lg:text-display-2xl text-white mt-4 max-w-4xl"
           >
-            Empowering E-commerce Success Across the{" "}
+            Empowering <span className="whitespace-nowrap">E-commerce</span> Success Across the{" "}
             <span className="text-carrot-400">UAE</span> &{" "}
             <span className="text-carrot-400">GCC</span>
           </motion.h1>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const missionHighlight =
-  "Make e-commerce fulfillment seamless, scalable, and stress-free. Through advanced technology, a UAE hub, and a customer-first approach, we go beyond storage and shipping—acting as your team to strengthen your brand with every order.";
+  "Make e\u2011commerce fulfillment seamless, scalable, and stress-free. Through advanced technology, a UAE hub, and a customer-first approach, we go beyond storage and shipping—acting as your team to strengthen your brand with every order.";
 
 export default function MissionCard() {
   return (

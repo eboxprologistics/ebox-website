@@ -78,7 +78,7 @@ export default function LogoMarquee() {
         >
           <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-gold-rich to-gold-primary bg-clip-text text-transparent mb-2">500+</div>
-            <div className="text-sm text-text-secondary">E-commerce Sellers</div>
+            <div className="text-sm text-text-secondary whitespace-nowrap">E-commerce Sellers</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-gold-rich to-gold-primary bg-clip-text text-transparent mb-2">2M+</div>

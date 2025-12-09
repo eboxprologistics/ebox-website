@@ -79,6 +79,32 @@ export default function MobileMenu({
             {/* Menu Content */}
             <div className="flex-1 overflow-y-auto">
               <nav className="flex flex-col p-6">
+                {/* Home Link */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.05 }}
+                >
+                  <Link
+                    href={navigationLinks.home.href}
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === navigationLinks.home.href
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
+                    onClick={onClose}
+                  >
+                    {navigationLinks.home.name}
+                    {pathname === navigationLinks.home.href && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </Link>
+                </motion.div>
+
                 {/* What We Do Link */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}

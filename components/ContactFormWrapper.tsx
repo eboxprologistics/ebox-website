@@ -44,7 +44,7 @@ export default function ContactFormWrapper() {
             Get Started
           </SectionBadge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Ready to Fulfill Your <br className="hidden sm:inline" /> E-commerce
+            Ready to Fulfill Your <br className="hidden sm:inline" /> <span className="whitespace-nowrap">E-commerce</span>
             Potential?
           </h2>
           <p className="text-lg text-[#bcd0df] mb-8 font-normal">

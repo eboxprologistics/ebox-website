@@ -60,10 +60,10 @@ export default function CTASection() {
           <motion.div variants={fadeInUp} className="mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Scale Your 
-              <span className="block">E-commerce Business?</span>
+              <span className="block whitespace-nowrap">E-commerce Business?</span>
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join 500+ e-commerce sellers who have transformed their fulfillment operations 
+              Join 500+ <span className="whitespace-nowrap">e-commerce</span> sellers who have transformed their fulfillment operations 
               with Ebox Pro. Let's discuss how we can optimize your Amazon, Shopify, and Noon operations.
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function CTASection() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Call Us</h3>
-              <p className="text-white/80 text-sm mb-2">Speak with our e-commerce experts</p>
+              <p className="text-white/80 text-sm mb-2">Speak with our <span className="whitespace-nowrap">e-commerce</span> experts</p>
               <a href="tel:+971563562153" className="text-white font-medium hover:underline">
                 +971 56 356 2153
               </a>
@@ -136,7 +136,7 @@ export default function CTASection() {
           {/* Trust Indicators */}
           <motion.div variants={fadeInUp} className="mt-16">
             <p className="text-white/60 text-sm mb-6">
-              Trusted by 500+ e-commerce sellers • Amazon FBA Certified • 99.9% Order Accuracy
+              Trusted by 500+ <span className="whitespace-nowrap">e-commerce</span> sellers • Amazon FBA Certified • 99.9% Order Accuracy
             </p>
             <div className="flex justify-center items-center gap-8 opacity-60">
               <div className="text-white/60 font-medium text-sm">Amazon Partner</div>

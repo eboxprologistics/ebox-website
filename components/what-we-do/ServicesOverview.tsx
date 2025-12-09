@@ -149,7 +149,7 @@ export default function ServicesOverview() {
             Comprehensive Logistics Services
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-body-xl text-base-600 mt-4 max-w-2xl">
-            Everything you need to scale your e-commerce operations in the GCC region,
+            Everything you need to scale your <span className="whitespace-nowrap">e-commerce</span> operations in the GCC region,
             from storage to doorstep delivery.
           </motion.p>
         </motion.div>

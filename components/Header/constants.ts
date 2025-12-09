@@ -1,4 +1,5 @@
 export const navigationLinks = {
+  home: { name: "Home", href: "/" },
   services: [
     { name: "Warehousing & Storage", href: "/services/warehousing" },
     { name: "Order Fulfillment", href: "/services/order-fulfillment" },

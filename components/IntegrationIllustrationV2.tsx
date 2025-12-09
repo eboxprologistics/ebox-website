@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import LogoDark from "@/public/Ebox - Final Logo/ebox - final logo -08.svg";
+import Logo from "@/components/Logo";
 import IntegrationCard from "./IntegrationCard";
 import { Amazon, Noon, Shopify, WooCommerce } from "./logos";
-import { SiGoogle, SiMagento } from "react-icons/si";
+import { SiMagento } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 
 export default function IntegrationIllustrationV2() {
@@ -35,8 +34,8 @@ export default function IntegrationIllustrationV2() {
         </div>
 
         <div className="relative z-20 rounded-full border border-black/10 bg-white p-1.5 shadow-xl">
-          <div className="flex size-20 sm:size-28 md:size-32 items-center justify-center rounded-full border border-black/10 bg-white p-4">
-            <Image src={LogoDark} alt="Ebox Pro" className="w-full h-auto" />
+          <div className="flex size-20 sm:size-28 md:size-32 items-center justify-center rounded-full border border-black/10 bg-white p-3">
+            <Logo variant="dark" size="lg" asLink={false} />
           </div>
         </div>
       </div>

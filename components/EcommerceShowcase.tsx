@@ -89,7 +89,7 @@ export default function EcommerceShowcase() {
               </span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              From electronics to fashion, health to home goods - our e-commerce fulfillment
+              From electronics to fashion, health to home goods - our <span className="whitespace-nowrap">e-commerce</span> fulfillment
               adapts to any product category with specialized handling and storage.
             </p>
           </motion.div>
@@ -134,7 +134,7 @@ export default function EcommerceShowcase() {
             {/* Left: Capabilities List */}
             <motion.div variants={fadeInUp}>
               <h3 className="text-2xl font-bold text-text-primary mb-6">
-                E-commerce Capabilities
+                <span className="whitespace-nowrap">E-commerce</span> Capabilities
               </h3>
               <div className="space-y-4">
                 {capabilities.map((capability, index) => (

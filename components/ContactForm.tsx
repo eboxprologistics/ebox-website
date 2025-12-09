@@ -24,17 +24,32 @@ export default function ContactForm({
     company: "",
     volume: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setHasError(false);
+
     try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
       setIsSubmitted(true);
-      setHasError(false);
+      setFormData({ name: "", email: "", company: "", volume: "" });
     } catch {
       setHasError(true);
-      setIsSubmitted(false);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -110,9 +125,10 @@ export default function ContactForm({
         </div>
         <button
           type="submit"
-          className="mt-2 w-full btn-primary text-base lg:text-lg font-semibold py-4 shadow-lg"
+          disabled={isSubmitting}
+          className="mt-2 w-full btn-primary text-base lg:text-lg font-semibold py-4 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Request My Free Assessment
+          {isSubmitting ? "Sending..." : "Request My Free Assessment"}
         </button>
         {isSubmitted && (
           <div className="text-success font-semibold text-center bg-success-subtle border border-success/20 rounded-xl py-3 px-4">
