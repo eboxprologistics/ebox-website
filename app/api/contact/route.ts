@@ -23,8 +23,13 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Ebox Pro Website <onboarding@resend.dev>",
-      to: "hi@eboxprologistics.com",
+      from: "Ebox Pro Website <noreply@notifications.eboxprologistics.com>",
+      to: [
+        "hi@eboxprologistics.com",
+        "Sales@eboxprologistics.com",
+        "Ali@eboxprologistics.com",
+        "Tej@eboxprologistics.com",
+      ],
       replyTo: email,
       subject: `New Assessment Request from ${name}`,
       html: `

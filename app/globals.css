@@ -23,6 +23,11 @@ html {
   scroll-behavior: smooth;
 }
 
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
