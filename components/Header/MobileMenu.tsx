@@ -227,12 +227,24 @@ export default function MobileMenu({
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <button
-                    onClick={handleContactClick}
-                    className="relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200 text-base-900 hover:text-primary-600 w-full text-left"
+                  <Link
+                    href={navigationLinks.contact.href}
+                    className={cn(
+                      "relative flex items-center rounded-lg px-4 py-4 text-lg font-medium transition-all border-b border-base-200",
+                      pathname === navigationLinks.contact.href
+                        ? "text-primary-600 bg-primary-50 font-semibold"
+                        : "text-base-900 hover:text-primary-600"
+                    )}
+                    onClick={onClose}
                   >
                     {navigationLinks.contact.name}
-                  </button>
+                    {pathname === navigationLinks.contact.href && (
+                      <span
+                        className="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-2 bg-primary-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </Link>
                 </motion.div>
               </nav>
             </div>

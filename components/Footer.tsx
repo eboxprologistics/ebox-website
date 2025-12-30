@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import { useContactModal } from "@/components/ContactModal";
 
 const navigationLinks = {
   services: [
@@ -60,8 +59,6 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const { openModal } = useContactModal();
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -130,12 +127,12 @@ export default function Footer() {
                     {link.name}
                   </Link>
                 ))}
-                <button
-                  onClick={openModal}
-                  className="transition-colors text-sm hover:opacity-80 footer-text text-left"
+                <Link
+                  href="/contact"
+                  className="transition-colors text-sm hover:opacity-80 footer-text"
                 >
                   Contact Us
-                </button>
+                </Link>
               </div>
             </div>
 

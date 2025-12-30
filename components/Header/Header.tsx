@@ -9,11 +9,17 @@ import MobileMenu from "./MobileMenu";
 import { usePathname } from "next/navigation";
 import { useContactModal } from "@/components/ContactModal";
 
-export default function Header() {
+interface HeaderProps {
+  variant?: "default" | "light";
+}
+
+export default function Header({ variant = "default" }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const { openModal } = useContactModal();
+
+  const isLightVariant = variant === "light";
 
   // Handle scroll to make header sticky
   useEffect(() => {
@@ -42,6 +48,14 @@ export default function Header() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   function handleHeaderBackground() {
+    if (variant === "light") {
+      if (isScrolled) {
+        return "fixed bg-white/95 backdrop-blur-sm shadow-sm"
+      } else {
+        return "fixed bg-transparent"
+      }
+    }
+
     if (pathname !== "/" ) {
       if (isScrolled) {
         return "fixed bg-black/35 backdrop-blur-sm"
@@ -49,7 +63,6 @@ export default function Header() {
         return "fixed bg-transparent"
       }
     }
-
 
     if (isScrolled) {
       return "fixed bg-black/50 backdrop-blur-md"
@@ -68,8 +81,8 @@ export default function Header() {
       >
         <div className="bg-transparent flex justify-center items-center py-4">
           <div className="flex justify-between items-center w-full container-wide gap-8">
-            <Logo />
-            <DesktopNavigation pathname={pathname} />
+            <Logo variant={isLightVariant ? "dark" : "light"} />
+            <DesktopNavigation pathname={pathname} variant={isLightVariant ? "light" : "default"} />
 
             {/* CTA and Mobile Menu Right */}
             <div className="flex items-center gap-2">
