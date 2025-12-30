@@ -170,7 +170,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <a
-                  href="tel:+971563562153"
+                  href="tel:+971522590553"
                   className="flex items-center gap-3 transition-colors hover:opacity-80"
                 >
                   <svg
@@ -187,7 +187,7 @@ export default function Footer() {
                       strokeWidth="1.5"
                     />
                   </svg>
-                  <div className="text-sm footer-text">+971 56 356 2153</div>
+                  <div className="text-sm footer-text">+971 52 259 0553</div>
                 </a>
                 <a
                   href="mailto:hi@eboxprologistics.com"

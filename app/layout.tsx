@@ -66,12 +66,6 @@ gtag('config', 'AW-17763076208');`}
   return false;
 }`}
         </Script>
-        <link
-          rel="preload"
-          as="video"
-          href="https://res.cloudinary.com/dw1j7izud/video/upload/v1762959035/n0ic7gcjgvtbqxydmztc.mp4"
-          type="video/mp4"
-        />
       </head>
       <body
         className={`${fontPrimary.variable} ${fontSecondary.variable} antialiased`}

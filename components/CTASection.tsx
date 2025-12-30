@@ -101,8 +101,8 @@ export default function CTASection() {
               </div>
               <h3 className="text-white font-semibold mb-2">Call Us</h3>
               <p className="text-white/80 text-sm mb-2">Speak with our <span className="whitespace-nowrap">e-commerce</span> experts</p>
-              <a href="tel:+971563562153" className="text-white font-medium hover:underline">
-                +971 56 356 2153
+              <a href="tel:+971522590553" className="text-white font-medium hover:underline">
+                +971 52 259 0553
               </a>
             </motion.div>
 

@@ -2,7 +2,7 @@
 
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "971563562153";
+const WHATSAPP_NUMBER = "971522590553";
 const DEFAULT_MESSAGE = "Hi! I'm interested in learning more about Ebox Pro's fulfillment services.";
 
 export default function WhatsAppButton() {

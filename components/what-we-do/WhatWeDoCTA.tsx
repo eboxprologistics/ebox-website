@@ -79,7 +79,7 @@ export default function WhatWeDoCTA() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="tel:+97142345678"
+              href="tel:+971522590553"
               className="btn-white text-center px-8 py-4 flex items-center justify-center gap-2 border-white/20 text-white bg-white/10 hover:bg-white/20"
             >
               <Phone className="w-4 h-4" />
@@ -100,11 +100,11 @@ export default function WhatWeDoCTA() {
               hello@eboxpro.com
             </a>
             <a
-              href="tel:+97142345678"
+              href="tel:+971522590553"
               className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
             >
               <Phone className="w-4 h-4" />
-              +971 4 234 5678
+              +971 52 259 0553
             </a>
           </motion.div>
         </motion.div>
